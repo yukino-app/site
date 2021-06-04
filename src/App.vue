@@ -127,7 +127,7 @@
                                 md:flex-row
                                 justify-center
                                 items-center
-                                gap-3
+                                gap-2
                                 md:gap-5
                                 px-5
                                 py-4
@@ -384,7 +384,7 @@ export default defineComponent({
                 {
                     icon: "bolt",
                     headline: "Cross Platform",
-                    text: "Available for Windows, MacOS and Linux! Built on top of Electron and Vue.",
+                    text: "Available for Windows, MacOS, Linux and Android! Built on top of Vue, Electron and Capacitor.",
                     bgcolor: "bg-blue-400",
                     textcolor: "text-blue-400",
                 },
@@ -431,6 +431,10 @@ export default defineComponent({
                         x.browser_download_url.endsWith(".dmg")
                     );
 
+                    const android = release.assets.find((x: any) =>
+                        x.browser_download_url.endsWith(".apk")
+                    );
+
                     if (version) {
                         const r: DownloadEntity = {
                             version,
@@ -455,6 +459,13 @@ export default defineComponent({
                             r.platforms.mac = {
                                 url: mac.browser_download_url,
                                 size: mac.size,
+                            };
+                        }
+
+                        if (android) {
+                            r.platforms.android = {
+                                url: android.browser_download_url,
+                                size: android.size,
                             };
                         }
 
@@ -483,6 +494,9 @@ export default defineComponent({
 
                 case "mac":
                     return ["fab", "apple"];
+
+                case "android":
+                    return ["fab", "android"];
 
                 default:
                     return "";

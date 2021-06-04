@@ -20,6 +20,7 @@ import {
     faLinux,
     faApple,
     faDiscord,
+    faAndroid,
 } from "@fortawesome/free-brands-svg-icons";
 
 import App from "./App.vue";
@@ -41,7 +42,8 @@ library.add(
     faMapMarkerAlt,
     faStream,
     faDiscord,
-    faBolt
+    faBolt,
+    faAndroid
 );
 
 createApp(App).component("Icon", FontAwesomeIcon).mount("#app");
