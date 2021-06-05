@@ -7,3 +7,9 @@ export const scrollToDownloads = () => {
         });
     }
 };
+
+export const constants = {
+	urls: {
+		guides: "https://zyrouge.github.io/yukino-app/guides"
+	}
+}

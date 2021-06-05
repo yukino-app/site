@@ -1,11 +1,14 @@
 {
   "name": "yukino-web",
+  "productName": "Yukino",
   "version": "0.0.0",
   "scripts": {
     "vite:dev": "vite",
     "vite:build": "vue-tsc --noEmit && vite build",
     "vite:serve": "vite preview",
-    "build": "rimraf ./dist && npm run vite:build",
+    "guide:dev": "cross-env NODE_ENV=\"development\" npm run guide:build && npm run serve",
+    "guide:build": "node guide/render",
+    "build": "rimraf ./dist && npm run vite:build && npm run guide:build && npm run guide:build",
     "serve": "serve dist"
   },
   "dependencies": {
@@ -20,6 +23,9 @@
     "@vitejs/plugin-vue": "^1.2.2",
     "@vue/compiler-sfc": "^3.0.5",
     "autoprefixer": "^10.2.5",
+    "cross-env": "^7.0.3",
+    "gray-matter": "^4.0.3",
+    "marked": "^2.0.7",
     "postcss": "^8.3.0",
     "rimraf": "^3.0.2",
     "serve": "^11.3.2",

@@ -46,6 +46,7 @@
                     >
                         <span class="mr-1"><Icon icon="save" /></span> Download
                     </button>
+
                     <a
                         class="
                             bg-black
@@ -63,6 +64,25 @@
                             ><Icon :icon="['fab', 'github']"
                         /></span>
                         GitHub</a
+                    >
+
+                    <a
+                        class="
+                            bg-yellow-500
+                            hover:bg-yellow-600
+                            px-5
+                            py-2
+                            rounded-lg
+                            shadow-lg
+                            transition
+                            duration-300
+                        "
+                        :href="guidesUrl"
+                        target="_blank"
+                        ><span class="mr-1"
+                            ><Icon icon="book-open"
+                        /></span>
+                        Guide</a
                     >
 
                     <a
@@ -241,6 +261,20 @@
                         target="_blank"
                         >View all releases</a
                     >
+					<p class="mt-1">
+						Having trouble installing the app? Checkout our <a
+	                        class="
+	                            text-indigo-500
+	                            hover:text-indigo-600
+	                            font-bold
+	                            transition
+	                            duration-300
+	                        "
+	                        :href="guidesUrl"
+	                        target="_blank"
+	                        >guides</a
+	                    > page!
+					</p>
                 </p>
             </div>
 
@@ -286,7 +320,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { scrollToDownloads } from "./util";
+import { constants, scrollToDownloads } from "./util";
 import NavBar from "./components/NavBar.vue";
 
 interface DownloadEntity {
@@ -320,6 +354,7 @@ export default defineComponent({
                 all: string;
             };
             downloads: DownloadEntity[];
+			guidesUrl: string;
             isOpenedIndex: number | null;
         } = {
             screenshots: [
@@ -377,7 +412,7 @@ export default defineComponent({
                 {
                     icon: ["fab", "discord"],
                     headline: "Discord RPC",
-                    text: "Let you friends know what you are watching!",
+                    text: "Let your friends know what you are watching!",
                     bgcolor: "bg-blue-700",
                     textcolor: "text-blue-700",
                 },
@@ -394,6 +429,7 @@ export default defineComponent({
                 all: "https://api.github.com/repos/zyrouge/yukino-app/releases",
             },
             downloads: [],
+			guidesUrl: constants.urls.guides,
             isOpenedIndex: 0,
         };
 

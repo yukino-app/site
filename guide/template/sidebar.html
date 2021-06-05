@@ -1,0 +1,9 @@
+<div>
+	<ul style="line-height: 1.8; list-style-type: none; padding: 0;">
+		{{
+			data.sidebarData.map((data) => {
+				return `<li><a href="${data.url}">${data.title}</a></li>`;
+			}).join("\n");
+		}}
+	</ul>
+</div>

@@ -1,6 +1,6 @@
 ---
 title: Home
-description: Welcome to Zyrouge Guides!
+template: page
 ---
 
 Soon™

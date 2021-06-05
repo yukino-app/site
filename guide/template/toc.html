@@ -1,0 +1,9 @@
+<div>
+	<ul style="line-height: 1.8; list-style-type: none; padding: 0;">
+		{{
+			data.tocData.map((data) => {
+				return `<li><a href="#${data.id}">${data.title}</a></li>`;
+			}).join("\n");
+		}}
+	</ul>
+</div>

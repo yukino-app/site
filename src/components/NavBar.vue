@@ -59,6 +59,25 @@
                     GitHub</a
                 >
 
+				<a
+					class="
+						bg-yellow-500
+						hover:bg-yellow-600
+						text-white
+						px-4
+						py-1.5
+						rounded
+						transition
+						duration-200
+					"
+					:href="guidesUrl"
+					target="_blank"
+					><span class="mr-1"
+						><Icon icon="book-open"
+					/></span>
+					Guide</a
+				>
+
                 <a
                     class="
                         bg-orange-500
@@ -84,9 +103,18 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { scrollToDownloads } from "../util";
+import { constants, scrollToDownloads } from "../util";
 
 export default defineComponent({
+	data() {
+		const data: {
+			guidesUrl: string;
+		} = {
+			guidesUrl: constants.urls.guides,
+		};
+
+		return data;
+	},
     mounted() {
         document.addEventListener("scroll", () => {
             const ele = document.getElementById("nav");
