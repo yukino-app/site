@@ -23,10 +23,14 @@ const start = async () => {
     const baseUrlPrefix = isDev ? "http://localhost:5000" : "";
     config.computed_base_url = `${baseUrlPrefix}${config.base_url}${routeName}`;
 
+	const api = {
+		posts: [],
+		lastUpdated: Date.now()
+	};
     const data = {
         app_name: packageJson.productName,
         config,
-        sidebarData: []
+        sidebarData: [],
     };
 
     const files = glob(pages);
@@ -43,7 +47,7 @@ const start = async () => {
 
         const ext = file.split(".").pop();
 
-        if (["md", "html"].includes(ext)) {
+        if (["md", "html", "js"].includes(ext)) {
             const raw = fs.readFileSync(file).toString();
             const opts = {
                 template: null,
@@ -59,7 +63,10 @@ const start = async () => {
             if (ext === "html") {
                 opts.data.content = raw;
                 opts.data.meta.title = opts.data.content.match(/<h1>(.*?)<\/h1>/)[1];
-            } else {
+			} else if (ext === "js") {
+                fs.writeFileSync(outFile, renderer(raw, data));
+				continue;
+            } else if (ext === "md") {
                 const info = graymatter(raw);
                 Object.assign(opts.data.meta, info.data);
                 opts.template = info.data.template;
@@ -88,8 +95,8 @@ const start = async () => {
             ...file.data,
 			tocData: []
         };
-		const parseTocTag = (cont, tag) => {
-			for (const m of cont.matchAll(new RegExp(`<${tag}(.*?)>(.*?)</${tag}>`, "gm"))) {
+		["h1", "h2", "h3"].forEach((tag) => {
+			for (const m of opts.content.matchAll(new RegExp(`<${tag}(.*?)>(.*?)</${tag}>`, "gm"))) {
 				const id = m[1].match(/id="(.*?)"/)[1];
 				const title = m[2];
 				opts.tocData.push({
@@ -97,20 +104,23 @@ const start = async () => {
 					id
 				});
 			}
-		}
-		["h1", "h2", "h3"].forEach((t) => {
-			parseTocTag(opts.content, t);
 		});
 		opts.toc = renderer(templates.toc, opts);
 		opts.content = renderer(opts.content, opts);
         const html = renderer(templates[file.template], opts);
 		fs.writeFileSync(file.out, html);
+		const url = `${opts.config.computed_base_url}${file.out.replace(outDir, "")}`.replace(/\\/g, "/");
+		api.posts.push({
+			title: opts.meta.title,
+			url: url,
+			toc: opts.tocData.map(x => {
+				x.url = `${url}#${x.id}`;
+				return x;
+			}),
+		});
     }
 
-	fs.writeFileSync(path.join(outDir, "api.json"), JSON.stringify({
-		posts: data.sidebarData,
-		lastUpdated: Date.now()
-	}, null, 4));
+	fs.writeFileSync(path.join(outDir, "api.json"), JSON.stringify(api, null, 4));
 };
 
 start();
