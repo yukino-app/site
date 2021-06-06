@@ -10,7 +10,8 @@ module.exports = Object.entries({
     head: "head.html",
     sidebar: "sidebar.html",
     footer: "footer.html",
-	toc: "toc.html"
+    toc: "toc.html",
+    admonition: "admonition.html"
 }).reduce((pv, [key, val]) => {
     const p = path.isAbsolute(val) ? val : path.join(base, val);
     pv[key] = read(p);

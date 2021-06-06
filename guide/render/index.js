@@ -1,10 +1,11 @@
 const path = require("path");
 const fs = require("fs");
-const marked = require("marked");
 const graymatter = require("gray-matter");
 const templates = require("./template");
 const renderer = require("./renderer");
 const glob = require("./glob");
+const admonition = require("./components/admonition");
+const markdown = require("./components/markdown");
 const packageJson = require("../../package.json");
 const config = require("../../guide.config");
 
@@ -23,10 +24,10 @@ const start = async () => {
     const baseUrlPrefix = isDev ? "http://localhost:5000" : "";
     config.computed_base_url = `${baseUrlPrefix}${config.base_url}${routeName}`;
 
-	const api = {
-		posts: [],
-		lastUpdated: Date.now()
-	};
+    const api = {
+        posts: [],
+        lastUpdated: Date.now()
+    };
     const data = {
         app_name: packageJson.productName,
         config,
@@ -43,7 +44,7 @@ const start = async () => {
             fs.mkdirSync(dir, {
                 recursive: true,
             });
-        } catch (err) {}
+        } catch (err) { }
 
         const ext = file.split(".").pop();
 
@@ -54,8 +55,8 @@ const start = async () => {
                 out: `${outFile.slice(0, -ext.length)}html`,
                 data: {
                     meta: {
-						github_page_url: `${config.github_url}${file.replace(root, "").replace(/\\/g, "/")}`
-					},
+                        github_page_url: `${config.github_url}${file.replace(root, "").replace(/\\/g, "/")}`
+                    },
                     content: null
                 }
             };
@@ -63,16 +64,20 @@ const start = async () => {
             if (ext === "html") {
                 opts.data.content = raw;
                 opts.data.meta.title = opts.data.content.match(/<h1>(.*?)<\/h1>/)[1];
-			} else if (ext === "js") {
+            } else if (ext === "js") {
                 fs.writeFileSync(outFile, renderer(raw, data));
-				continue;
+                continue;
             } else if (ext === "md") {
                 const info = graymatter(raw);
-                Object.assign(opts.data.meta, info.data);
+                opts.data.content = info.content;
                 opts.template = info.data.template;
-                opts.data.content = marked(info.content);
+                Object.assign(opts.data.meta, info.data);
+
+                [admonition, markdown].forEach(plugin => {
+                    opts.data.content = plugin(opts.data.content);
+                });
             }
-			if (!opts.template) opts.template = "page";
+            if (!opts.template) opts.template = "page";
 
             renderables.push(opts);
             data.sidebarData.push({
@@ -90,37 +95,37 @@ const start = async () => {
     data.footer = renderer(templates.footer, data);
 
     for (const file of renderables) {
-		const opts = {
+        const opts = {
             ...data,
             ...file.data,
-			tocData: []
+            tocData: []
         };
-		["h1", "h2", "h3"].forEach((tag) => {
-			for (const m of opts.content.matchAll(new RegExp(`<${tag}(.*?)>(.*?)</${tag}>`, "gm"))) {
-				const id = m[1].match(/id="(.*?)"/)[1];
-				const title = m[2];
-				opts.tocData.push({
-					title,
-					id
-				});
-			}
-		});
-		opts.toc = renderer(templates.toc, opts);
-		opts.content = renderer(opts.content, opts);
+        // ["h1", "h2", "h3"].forEach((tag) => {
+        //     for (const m of opts.content.matchAll(new RegExp(`<${tag}(.*?)>(.*?)</${tag}>`, "gm"))) {
+        //         const id = m[1].match(/id="(.*?)"/)[1];
+        //         const title = m[2];
+        //         opts.tocData.push({
+        //             title,
+        //             id
+        //         });
+        //     }
+        // });
+        opts.toc = renderer(templates.toc, opts);
+        opts.content = renderer(opts.content, opts);
         const html = renderer(templates[file.template], opts);
-		fs.writeFileSync(file.out, html);
-		const url = `${opts.config.computed_base_url}${file.out.replace(outDir, "")}`.replace(/\\/g, "/");
-		api.posts.push({
-			title: opts.meta.title,
-			url: url,
-			toc: opts.tocData.map(x => {
-				x.url = `${url}#${x.id}`;
-				return x;
-			}),
-		});
+        fs.writeFileSync(file.out, html);
+        const url = `${opts.config.computed_base_url}${file.out.replace(outDir, "")}`.replace(/\\/g, "/");
+        api.posts.push({
+            title: opts.meta.title,
+            url: url,
+            toc: opts.tocData.map(x => {
+                x.url = `${url}#${x.id}`;
+                return x;
+            }),
+        });
     }
 
-	fs.writeFileSync(path.join(outDir, "api.json"), JSON.stringify(api, null, 4));
+    fs.writeFileSync(path.join(outDir, "api.json"), JSON.stringify(api, null, 4));
 };
 
 start();
