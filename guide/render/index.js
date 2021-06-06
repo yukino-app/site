@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require("fs");
-const cp = require("child_process");
 const graymatter = require("gray-matter");
+const minify = require("minify");
 const templates = require("./template");
 const renderer = require("./renderer");
 const glob = require("./glob");
@@ -49,7 +49,7 @@ const start = async () => {
 
         const ext = file.split(".").pop();
 
-        if (["md", "html", "js"].includes(ext)) {
+        if (["md", "html", "js", "css"].includes(ext)) {
             const raw = fs.readFileSync(file).toString();
             const fileInfo = fs.lstatSync(file);
             const opts = {
@@ -70,7 +70,10 @@ const start = async () => {
                 opts.data.meta.title =
                     opts.data.content.match(/<h1>(.*?)<\/h1>/)[1];
             } else if (ext === "js") {
-                fs.writeFileSync(outFile, renderer(raw, data));
+                fs.writeFileSync(outFile, await minify.js(renderer(raw, data)));
+                continue;
+            } else if (ext === "css") {
+                fs.writeFileSync(outFile, await minify.css(raw));
                 continue;
             } else if (ext === "md") {
                 const info = graymatter(raw);
@@ -124,7 +127,7 @@ const start = async () => {
         opts.toc = renderer(templates.toc, opts);
         opts.content = renderer(opts.content, opts);
         const html = renderer(templates[file.template], opts);
-        fs.writeFileSync(file.out, html);
+        fs.writeFileSync(file.out, minify.html(html));
         const url = `${opts.config.computed_base_url}${file.out.replace(
             outDir,
             ""
@@ -146,24 +149,3 @@ const start = async () => {
 };
 
 start();
-
-function getFileInfoFromGit(file) {
-    const raw = cp
-        .execSync(`git log -n 1 --pretty=medium ${file}`)
-        .toString()
-        .split("\n");
-    const author = raw
-        .find((x) => x.startsWith("Author:"))
-        .replace("Author:", "")
-        .split("<")[0]
-        .trim();
-    const time = raw
-        .find((x) => x.startsWith("Date:"))
-        .replace("Date:", "")
-        .trim();
-
-    return {
-        author,
-        date: new Date(time),
-    };
-}
