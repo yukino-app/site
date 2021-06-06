@@ -51,6 +51,7 @@ const start = async () => {
 
         if (["md", "html", "js"].includes(ext)) {
             const raw = fs.readFileSync(file).toString();
+            const fileInfo = fs.lstatSync(file);
             const opts = {
                 template: null,
                 out: `${outFile.slice(0, -ext.length)}html`,
@@ -76,13 +77,13 @@ const start = async () => {
                 opts.data.content = info.content;
                 opts.template = info.data.template;
                 Object.assign(opts.data.meta, info.data);
-                opts.data.lastEdited = getFileInfoFromGit(file);
 
                 [admonition, markdown].forEach((plugin) => {
                     opts.data.content = plugin(opts.data.content);
                 });
             }
             if (!opts.template) opts.template = "page";
+            opts.data.lastEdited = fileInfo.mtime;
 
             renderables.push(opts);
             data.sidebarData.push({

@@ -29,7 +29,7 @@
 	                {{ data.content }}
 
 					<a href="{{ data.meta.github_page_url }}" style="margin-bottom: 0.2rem;">✏️ Improve this page on GitHub</a>
-					<p style="margin: 0.3rem 0 0 0; opacity: 0.6; font-size: 0.8rem;">Last edited on {{ data.lastEdited.date.toLocaleString("en-US", { timeZoneName: "short" }) }} by {{ data.lastEdited.author }}</p>
+					<p style="margin: 0.3rem 0 0 0; opacity: 0.6; font-size: 0.8rem;">Last edited on {{ data.lastEdited.toLocaleString("en-US", { timeZoneName: "short" }) }}</p>
 	            </div>
 	        </article>
 
