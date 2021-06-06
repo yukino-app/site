@@ -3,32 +3,13 @@ title: Home
 template: page
 ---
 
-Soon™
+## How do I use this wiki?
 
-> test quotes kekw
+All the topics are visible on the left sidebar (top on mobile). All the pace content headings are visible on the right sidebar (top on mobile).
 
-::: info "Hello there!"
-keker hello
-btw
-nice
-:::
+You can use the search bar to navigate around easily. Feel free to ask on our Discord server if its nowhere to be found.
 
-::: warn "Hello there!"
-keker hello
-btw
-nice
-:::
+## Links
 
-::: success "Hello there!"
-keker hello
-btw
-nice
-:::
-
-::: danger "Hello there!"
-keker hello
-btw
-nice
-:::
-
-nope
+-   [Discord](/)
+-   [GitHub](https://github.com/zyrouge/yukino-app)
