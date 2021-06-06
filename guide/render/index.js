@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const cp = require("child_process");
 const graymatter = require("gray-matter");
 const templates = require("./template");
 const renderer = require("./renderer");
@@ -26,7 +27,7 @@ const start = async () => {
 
     const api = {
         posts: [],
-        lastUpdated: Date.now()
+        lastUpdated: Date.now(),
     };
     const data = {
         app_name: packageJson.productName,
@@ -44,7 +45,7 @@ const start = async () => {
             fs.mkdirSync(dir, {
                 recursive: true,
             });
-        } catch (err) { }
+        } catch (err) {}
 
         const ext = file.split(".").pop();
 
@@ -55,15 +56,18 @@ const start = async () => {
                 out: `${outFile.slice(0, -ext.length)}html`,
                 data: {
                     meta: {
-                        github_page_url: `${config.github_url}${file.replace(root, "").replace(/\\/g, "/")}`
+                        github_page_url: `${config.github_url}${file
+                            .replace(root, "")
+                            .replace(/\\/g, "/")}`,
                     },
-                    content: null
-                }
+                    content: null,
+                },
             };
 
             if (ext === "html") {
                 opts.data.content = raw;
-                opts.data.meta.title = opts.data.content.match(/<h1>(.*?)<\/h1>/)[1];
+                opts.data.meta.title =
+                    opts.data.content.match(/<h1>(.*?)<\/h1>/)[1];
             } else if (ext === "js") {
                 fs.writeFileSync(outFile, renderer(raw, data));
                 continue;
@@ -72,8 +76,9 @@ const start = async () => {
                 opts.data.content = info.content;
                 opts.template = info.data.template;
                 Object.assign(opts.data.meta, info.data);
+                opts.data.lastEdited = getFileInfoFromGit(file);
 
-                [admonition, markdown].forEach(plugin => {
+                [admonition, markdown].forEach((plugin) => {
                     opts.data.content = plugin(opts.data.content);
                 });
             }
@@ -82,7 +87,10 @@ const start = async () => {
             renderables.push(opts);
             data.sidebarData.push({
                 title: opts.data.meta.title,
-                url: `${config.computed_base_url}${opts.out.replace(outDir, "")}`.replace(/\\/g, "/")
+                url: `${config.computed_base_url}${opts.out.replace(
+                    outDir,
+                    ""
+                )}`.replace(/\\/g, "/"),
             });
         } else {
             fs.copyFileSync(file, outFile);
@@ -98,34 +106,63 @@ const start = async () => {
         const opts = {
             ...data,
             ...file.data,
-            tocData: []
+            tocData: [],
         };
-        // ["h1", "h2", "h3"].forEach((tag) => {
-        //     for (const m of opts.content.matchAll(new RegExp(`<${tag}(.*?)>(.*?)</${tag}>`, "gm"))) {
-        //         const id = m[1].match(/id="(.*?)"/)[1];
-        //         const title = m[2];
-        //         opts.tocData.push({
-        //             title,
-        //             id
-        //         });
-        //     }
-        // });
+        ["h1", "h2", "h3"].forEach((tag) => {
+            for (const m of opts.content.matchAll(
+                new RegExp(`<${tag}(.*?)>(.*?)</${tag}>`, "gm")
+            )) {
+                const id = m[1].match(/id="(.*?)"/)[1];
+                const title = m[2];
+                opts.tocData.push({
+                    title,
+                    id,
+                });
+            }
+        });
         opts.toc = renderer(templates.toc, opts);
         opts.content = renderer(opts.content, opts);
         const html = renderer(templates[file.template], opts);
         fs.writeFileSync(file.out, html);
-        const url = `${opts.config.computed_base_url}${file.out.replace(outDir, "")}`.replace(/\\/g, "/");
+        const url = `${opts.config.computed_base_url}${file.out.replace(
+            outDir,
+            ""
+        )}`.replace(/\\/g, "/");
         api.posts.push({
             title: opts.meta.title,
             url: url,
-            toc: opts.tocData.map(x => {
+            toc: opts.tocData.map((x) => {
                 x.url = `${url}#${x.id}`;
                 return x;
             }),
         });
     }
 
-    fs.writeFileSync(path.join(outDir, "api.json"), JSON.stringify(api, null, 4));
+    fs.writeFileSync(
+        path.join(outDir, "api.json"),
+        JSON.stringify(api, null, 4)
+    );
 };
 
 start();
+
+function getFileInfoFromGit(file) {
+    const raw = cp
+        .execSync(`git log -n 1 --pretty=medium ${file}`)
+        .toString()
+        .split("\n");
+    const author = raw
+        .find((x) => x.startsWith("Author:"))
+        .replace("Author:", "")
+        .split("<")[0]
+        .trim();
+    const time = raw
+        .find((x) => x.startsWith("Date:"))
+        .replace("Date:", "")
+        .trim();
+
+    return {
+        author,
+        date: new Date(time),
+    };
+}

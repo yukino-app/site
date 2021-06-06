@@ -136,7 +136,6 @@ blockquote, .admonition {
     border: none;
 	border-radius: var(--round);
     border-left: 0.3rem solid;
-	
 }
 
 blockquote {
