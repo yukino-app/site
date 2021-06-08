@@ -199,12 +199,15 @@
             <hr class="my-10" />
             <div>
                 <h1 class="text-2xl font-bold">Preview</h1>
-                <div class="flex flex-col justify-center items-center">
-                    <img
-                        class="mt-4 rounded w-full md:w-5/6"
-                        v-for="(ss, i) in screenshots"
-                        :src="ss"
-                        :alt="`Screenshot ${i}`"
+                <div class="mt-4">
+                    <SlideShow
+                        :images="screenshots"
+                        :imgClassNames="[
+                            'rounded',
+                            'w-full',
+                            'md:w-5/6',
+                            'shadow-md',
+                        ]"
                     />
                 </div>
             </div>
@@ -317,6 +320,39 @@
                     for information about contributing!
                 </p>
             </div>
+
+            <hr class="my-10" />
+            <div>
+                <h1 class="text-2xl font-bold">Need help?</h1>
+                <p class="mt-4">
+                    Use our
+                    <a
+                        class="
+                            text-indigo-500
+                            hover:text-indigo-600
+                            font-bold
+                            transition
+                            duration-300
+                        "
+                        :href="guidesUrl"
+                        >guides</a
+                    >
+                    or join our
+                    <a
+                        class="
+                            text-indigo-500
+                            hover:text-indigo-600
+                            font-bold
+                            transition
+                            duration-300
+                        "
+                        :href="discordInvite"
+                        target="_blank"
+                        >discord
+                    </a>
+                    for support!
+                </p>
+            </div>
         </div>
 
         <div class="bg-indigo-500 text-center text-white px-10 py-10">
@@ -341,6 +377,7 @@
 import { defineComponent } from "vue";
 import { constants, scrollToDownloads } from "./util";
 import NavBar from "./components/NavBar.vue";
+import SlideShow from "./components/SlideShow.vue";
 
 interface DownloadEntity {
     version: string;
@@ -357,6 +394,7 @@ export default defineComponent({
     name: "App",
     components: {
         NavBar,
+        SlideShow,
     },
     data() {
         const data: {

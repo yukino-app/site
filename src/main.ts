@@ -12,6 +12,8 @@ import {
     faMapMarkerAlt,
     faStream,
     faBolt,
+    faChevronLeft,
+    faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faGithub,
@@ -43,7 +45,9 @@ library.add(
     faStream,
     faDiscord,
     faBolt,
-    faAndroid
+    faAndroid,
+    faChevronLeft,
+    faChevronRight
 );
 
 createApp(App).component("Icon", FontAwesomeIcon).mount("#app");
