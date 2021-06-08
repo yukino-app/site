@@ -79,16 +79,14 @@
                         "
                         :href="guidesUrl"
                         target="_blank"
-                        ><span class="mr-1"
-                            ><Icon icon="book-open"
-                        /></span>
+                        ><span class="mr-1"><Icon icon="book-open" /></span>
                         Guide</a
                     >
 
                     <a
                         class="
-                            bg-orange-500
-                            hover:bg-orange-600
+                            bg-orange-600
+                            hover:bg-orange-700
                             px-5
                             py-2
                             rounded-lg
@@ -102,6 +100,25 @@
                             ><Icon :icon="['fab', 'patreon']"
                         /></span>
                         Patreon</a
+                    >
+
+                    <a
+                        class="
+                            bg-blue-700
+                            hover:bg-blue-800
+                            px-5
+                            py-2
+                            rounded-lg
+                            shadow-lg
+                            transition
+                            duration-300
+                        "
+                        :href="discordInvite"
+                        target="_blank"
+                        ><span class="mr-1"
+                            ><Icon :icon="['fab', 'discord']"
+                        /></span>
+                        Discord</a
                     >
                 </div>
             </div>
@@ -248,7 +265,7 @@
                     </div>
                 </div>
 
-                <p class="mt-4">
+                <div class="mt-4">
                     <a
                         class="
                             text-indigo-500
@@ -261,21 +278,23 @@
                         target="_blank"
                         >View all releases</a
                     >
-					<p class="mt-1">
-						Having trouble installing the app? Checkout our <a
-	                        class="
-	                            text-indigo-500
-	                            hover:text-indigo-600
-	                            font-bold
-	                            transition
-	                            duration-300
-	                        "
-	                        :href="guidesUrl"
-	                        target="_blank"
-	                        >guides</a
-	                    > page!
-					</p>
-                </p>
+                    <p class="mt-1">
+                        Having trouble installing the app? Checkout our
+                        <a
+                            class="
+                                text-indigo-500
+                                hover:text-indigo-600
+                                font-bold
+                                transition
+                                duration-300
+                            "
+                            :href="guidesUrl"
+                            target="_blank"
+                            >guides</a
+                        >
+                        page!
+                    </p>
+                </div>
             </div>
 
             <hr class="my-10" />
@@ -354,7 +373,8 @@ export default defineComponent({
                 all: string;
             };
             downloads: DownloadEntity[];
-			guidesUrl: string;
+            guidesUrl: string;
+            discordInvite: string;
             isOpenedIndex: number | null;
         } = {
             screenshots: [
@@ -429,7 +449,8 @@ export default defineComponent({
                 all: "https://api.github.com/repos/zyrouge/yukino-app/releases",
             },
             downloads: [],
-			guidesUrl: constants.urls.guides,
+            guidesUrl: constants.urls.guides,
+            discordInvite: constants.urls.discord,
             isOpenedIndex: 0,
         };
 

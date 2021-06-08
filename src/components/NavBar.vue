@@ -59,29 +59,27 @@
                     GitHub</a
                 >
 
-				<a
-					class="
-						bg-yellow-500
-						hover:bg-yellow-600
-						text-white
-						px-4
-						py-1.5
-						rounded
-						transition
-						duration-200
-					"
-					:href="guidesUrl"
-					target="_blank"
-					><span class="mr-1"
-						><Icon icon="book-open"
-					/></span>
-					Guide</a
-				>
+                <a
+                    class="
+                        bg-yellow-500
+                        hover:bg-yellow-600
+                        text-white
+                        px-4
+                        py-1.5
+                        rounded
+                        transition
+                        duration-200
+                    "
+                    :href="guidesUrl"
+                    target="_blank"
+                    ><span class="mr-1"><Icon icon="book-open" /></span>
+                    Guide</a
+                >
 
                 <a
                     class="
-                        bg-orange-500
-                        hover:bg-orange-600
+                        bg-orange-600
+                        hover:bg-orange-700
                         text-white
                         px-4
                         py-1.5
@@ -96,6 +94,26 @@
                     /></span>
                     Patreon</a
                 >
+
+                <a
+                    class="
+                        bg-blue-700
+                        hover:bg-blue-800
+                        text-white
+                        px-5
+                        py-2
+                        rounded-lg
+                        shadow-lg
+                        transition
+                        duration-300
+                    "
+                    :href="discordInvite"
+                    target="_blank"
+                    ><span class="mr-1"
+                        ><Icon :icon="['fab', 'discord']"
+                    /></span>
+                    Discord</a
+                >
             </div>
         </div>
     </div>
@@ -106,15 +124,17 @@ import { defineComponent } from "vue";
 import { constants, scrollToDownloads } from "../util";
 
 export default defineComponent({
-	data() {
-		const data: {
-			guidesUrl: string;
-		} = {
-			guidesUrl: constants.urls.guides,
-		};
+    data() {
+        const data: {
+            guidesUrl: string;
+            discordInvite: string;
+        } = {
+            guidesUrl: constants.urls.guides,
+            discordInvite: constants.urls.discord,
+        };
 
-		return data;
-	},
+        return data;
+    },
     mounted() {
         document.addEventListener("scroll", () => {
             const ele = document.getElementById("nav");
