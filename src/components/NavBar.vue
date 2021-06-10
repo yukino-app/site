@@ -1,5 +1,8 @@
 <template>
-    <div class="fixed top-0 left-0 right-0 bg-white shadow-md z-50" id="nav">
+    <div
+        class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 md:block"
+        id="nav"
+    >
         <div
             class="
                 flex flex-col
@@ -11,17 +14,46 @@
                 py-3
             "
         >
-            <div>
-                <img class="w-10" src="/icon.png" alt="Logo" />
-            </div>
             <div
                 class="
                     flex flex-row
-                    justify-center
+                    justify-between
                     items-center
                     gap-2
                     flex-wrap
+                    w-full
+                    md:w-auto
                 "
+            >
+                <div class="px-2 md:px-0">
+                    <img class="w-10" src="/icon.png" alt="Logo" />
+                </div>
+
+                <button
+                    class="
+                        block
+                        md:hidden
+                        cursor-pointer
+                        focus:outline-none
+                        px-2
+                    "
+                    @click.prevent.stop="openNavItems()"
+                >
+                    <Icon icon="times" v-if="showNavItems" />
+                    <Icon icon="bars" v-else />
+                </button>
+            </div>
+
+            <div
+                :class="[
+                    showNavItems ? 'flex' : 'hidden',
+                    'flex-row',
+                    'justify-center',
+                    'items-center',
+                    'gap-2',
+                    'flex-wrap',
+                    'md:flex',
+                ]"
             >
                 <button
                     class="
@@ -128,9 +160,11 @@ export default defineComponent({
         const data: {
             guidesUrl: string;
             discordInvite: string;
+            showNavItems: boolean;
         } = {
             guidesUrl: constants.urls.guides,
             discordInvite: constants.urls.discord,
+            showNavItems: false,
         };
 
         return data;
@@ -150,6 +184,10 @@ export default defineComponent({
         });
     },
     methods: {
+        openNavItems() {
+            this.showNavItems = !this.showNavItems;
+            console.log(this.showNavItems);
+        },
         scrollToDownloads,
     },
 });
@@ -157,9 +195,9 @@ export default defineComponent({
 
 <style scoped>
 #nav {
-    transform: translateY(-200px);
+    transform: translateY(-30rem);
 
-    @apply transition duration-200;
+    @apply transition duration-300 ease-in-out;
 }
 
 #nav.active {

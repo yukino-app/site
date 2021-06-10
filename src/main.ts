@@ -14,6 +14,8 @@ import {
     faBolt,
     faChevronLeft,
     faChevronRight,
+    faTimes,
+    faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faGithub,
@@ -47,7 +49,9 @@ library.add(
     faBolt,
     faAndroid,
     faChevronLeft,
-    faChevronRight
+    faChevronRight,
+    faTimes,
+    faBars
 );
 
 createApp(App).component("Icon", FontAwesomeIcon).mount("#app");
