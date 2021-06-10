@@ -132,12 +132,11 @@
                         bg-blue-700
                         hover:bg-blue-800
                         text-white
-                        px-5
-                        py-2
-                        rounded-lg
-                        shadow-lg
+                        px-4
+                        py-1.5
+                        rounded
                         transition
-                        duration-300
+                        duration-200
                     "
                     :href="discordInvite"
                     target="_blank"
