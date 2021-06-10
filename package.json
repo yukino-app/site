@@ -19,7 +19,6 @@
     "vue": "^3.0.5"
   },
   "devDependencies": {
-    "@tailwindcss/jit": "^0.1.18",
     "@vitejs/plugin-vue": "^1.2.2",
     "@vue/compiler-sfc": "^3.0.5",
     "autoprefixer": "^10.2.5",
