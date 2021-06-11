@@ -35,7 +35,12 @@ const start = async () => {
         sidebarData: [],
     };
 
-    const files = glob(pages);
+    const files = glob(pages).sort((a, b) => {
+        const { birthtimeMs: at } = fs.lstatSync(a);
+        const { birthtimeMs: bt } = fs.lstatSync(b);
+        return at - bt;
+    });
+
     const renderables = [];
 
     for (const file of files) {
