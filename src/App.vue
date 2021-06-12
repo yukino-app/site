@@ -281,7 +281,7 @@
                         >View all releases</a
                     >
                     <p class="mt-1">
-                        Having trouble installing the app? Checkout our
+                        Have trouble installing the app? Checkout our
                         <a
                             class="
                                 text-indigo-500
