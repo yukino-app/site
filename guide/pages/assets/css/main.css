@@ -25,7 +25,7 @@
     --danger-lighter: #f8717120;
     --danger-light: #ef4444;
 
-    --gap: 1.8rem;
+    --gap: 1.4rem;
     --round: 0.3rem;
 }
 
@@ -193,8 +193,17 @@ html.dark blockquote {
     border-color: var(--danger-light);
 }
 
-:is(blockquote, .admonition-content) > *:last-child {
+:is(blockquote, .admonition-content) > *:last-child,
+li * {
     margin: 0;
+}
+
+ul li {
+    margin-bottom: 0.8rem;
+}
+
+li * + ul {
+    margin-top: 0.8rem;
 }
 
 nav {

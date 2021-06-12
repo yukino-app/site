@@ -10,9 +10,9 @@ module.exports = (content) => {
         return renderer(templates.admonition, {
             type: type.trim(),
             title: title.trim(),
-            content: markdown(content.join("\n").trim()).trim()
+            content: markdown(content.join("\n").trim()).trim(),
         });
     });
 
     return content;
-}
+};
