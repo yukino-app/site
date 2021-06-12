@@ -249,7 +249,6 @@
                                 duration-300
                             "
                             :href="src.url"
-                            target="_blank"
                             v-for="[platform, src] in Object.entries(
                                 download.platforms
                             )"
