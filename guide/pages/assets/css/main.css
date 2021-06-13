@@ -222,43 +222,52 @@ main {
     margin: 3rem;
 }
 
-main.gridify {
+.gridify {
     display: grid;
 }
 
-main.gridify article {
+.gridify article {
     order: 999;
 }
 
 @media screen and (min-width: 900px) {
-    main.gridify {
+    .gridify {
         grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 3rem;
         margin-top: 0;
         margin-bottom: 0;
     }
 
-    main.gridify > * {
+    .gridify > * {
         padding: 3rem 0;
     }
 
-    main.gridify aside {
+    .gridify aside {
         position: sticky;
         top: 0;
         height: min-content;
         grid-column: span 1 / span 1;
     }
 
-    main.gridify article {
+    .gridify article {
         grid-column: span 3 / span 3;
         order: initial;
     }
 
-    main.gridify #toc {
+    .gridify #toc {
         position: sticky;
         top: 0;
         height: min-content;
         grid-column: span 1 / span 1;
+    }
+
+    .side-content-container {
+        overflow: hidden;
+    }
+
+    .side-content-box {
+        max-height: calc(100vh - 7rem);
+        overflow-y: auto;
     }
 }
 
@@ -297,4 +306,12 @@ main.gridify article {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    scrollbar-width: none;
 }
