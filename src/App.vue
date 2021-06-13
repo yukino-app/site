@@ -204,9 +204,10 @@
                         :images="screenshots"
                         :imgClassNames="[
                             'rounded',
-                            'w-full',
-                            'md:w-5/6',
-                            'shadow-md',
+                            'w-auto',
+                            'md:max-w-5/6',
+                            'max-h-[70vh]',
+                            'shadow-lg',
                         ]"
                     />
                 </div>
@@ -414,15 +415,21 @@ export default defineComponent({
             discordInvite: string;
             isOpenedIndex: number | null;
         } = {
-            screenshots: [
-                "https://github.com/zyrouge/yukino-app/raw/next/screenshots/home.png",
-                "https://github.com/zyrouge/yukino-app/raw/next/screenshots/search.png",
-                "https://github.com/zyrouge/yukino-app/raw/next/screenshots/anime.png",
-                "https://github.com/zyrouge/yukino-app/raw/next/screenshots/episodes.png",
-                "https://github.com/zyrouge/yukino-app/raw/next/screenshots/sources.png",
-                "https://github.com/zyrouge/yukino-app/raw/next/screenshots/player.png",
-                "https://github.com/zyrouge/yukino-app/raw/next/screenshots/manga.png",
-            ],
+            screenshots: ["desktop", "mobile"].reduce((pv, cv) => {
+                pv.push(
+                    ...[
+                        `https://github.com/zyrouge/yukino-app/raw/next/screenshots/${cv}/home.png`,
+                        `https://github.com/zyrouge/yukino-app/raw/next/screenshots/${cv}/search.png`,
+                        `https://github.com/zyrouge/yukino-app/raw/next/screenshots/${cv}/anime.png`,
+                        `https://github.com/zyrouge/yukino-app/raw/next/screenshots/${cv}/episodes.png`,
+                        `https://github.com/zyrouge/yukino-app/raw/next/screenshots/${cv}/sources.png`,
+                        `https://github.com/zyrouge/yukino-app/raw/next/screenshots/${cv}/player.png`,
+                        `https://github.com/zyrouge/yukino-app/raw/next/screenshots/${cv}/manga.png`,
+                    ]
+                );
+
+                return pv;
+            }, <string[]>[]),
             features: [
                 {
                     icon: "compact-disc",
