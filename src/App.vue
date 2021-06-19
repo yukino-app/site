@@ -68,8 +68,8 @@
 
                     <a
                         class="
-                            bg-yellow-500
-                            hover:bg-yellow-600
+                            bg-blue-500
+                            hover:bg-blue-600
                             px-5
                             py-2
                             rounded-lg
@@ -85,8 +85,8 @@
 
                     <a
                         class="
-                            bg-orange-600
-                            hover:bg-orange-700
+                            bg-orange-500
+                            hover:bg-orange-600
                             px-5
                             py-2
                             rounded-lg

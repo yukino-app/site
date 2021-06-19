@@ -93,8 +93,8 @@
 
                 <a
                     class="
-                        bg-yellow-500
-                        hover:bg-yellow-600
+                        bg-blue-500
+                        hover:bg-blue-600
                         text-white
                         px-4
                         py-1.5
