@@ -1,0 +1,88 @@
+{
+    "posts": [
+        {
+            "title": "Home",
+            "url": "/guides/index.html",
+            "toc": [
+                {
+                    "title": "How do I use this wiki?",
+                    "id": "how-do-i-use-this-wiki",
+                    "url": "/guides/index.html#how-do-i-use-this-wiki"
+                },
+                {
+                    "title": "Links",
+                    "id": "links",
+                    "url": "/guides/index.html#links"
+                }
+            ]
+        },
+        {
+            "title": "How does it work?",
+            "url": "/guides/posts/how-it-works.html",
+            "toc": [
+                {
+                    "title": "Overview",
+                    "id": "overview",
+                    "url": "/guides/posts/how-it-works.html#overview"
+                },
+                {
+                    "title": "The flow",
+                    "id": "the-flow",
+                    "url": "/guides/posts/how-it-works.html#the-flow"
+                },
+                {
+                    "title": "Privacy",
+                    "id": "privacy",
+                    "url": "/guides/posts/how-it-works.html#privacy"
+                }
+            ]
+        },
+        {
+            "title": "Installation",
+            "url": "/guides/posts/installation.html",
+            "toc": [
+                {
+                    "title": "Requirements",
+                    "id": "requirements",
+                    "url": "/guides/posts/installation.html#requirements"
+                },
+                {
+                    "title": "Downloading",
+                    "id": "downloading",
+                    "url": "/guides/posts/installation.html#downloading"
+                },
+                {
+                    "title": "Windows",
+                    "id": "windows",
+                    "url": "/guides/posts/installation.html#windows"
+                },
+                {
+                    "title": "Mac",
+                    "id": "mac",
+                    "url": "/guides/posts/installation.html#mac"
+                },
+                {
+                    "title": "Linux",
+                    "id": "linux",
+                    "url": "/guides/posts/installation.html#linux"
+                },
+                {
+                    "title": "Android",
+                    "id": "android",
+                    "url": "/guides/posts/installation.html#android"
+                },
+                {
+                    "title": "Blocked by Windows SmartScreen",
+                    "id": "blocked-by-windows-smartscreen",
+                    "url": "/guides/posts/installation.html#blocked-by-windows-smartscreen"
+                },
+                {
+                    "title": "Blocked by Android Play Protect",
+                    "id": "blocked-by-android-play-protect",
+                    "url": "/guides/posts/installation.html#blocked-by-android-play-protect"
+                }
+            ]
+        }
+    ],
+    "lastUpdated": 1626847847683
+}
