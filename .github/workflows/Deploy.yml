@@ -1,10 +1,10 @@
-name: Site
+name: Site (Build)
 
 on:
     workflow_dispatch:
     push:
         branches:
-            - site
+            - main
 
 jobs:
     build:
