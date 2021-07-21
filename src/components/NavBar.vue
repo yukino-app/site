@@ -83,7 +83,7 @@
                         transition
                         duration-200
                     "
-                    href="https://github.com/zyrouge/yukino-app/"
+                    href="https://github.com/yukino-app/yukino/"
                     target="_blank"
                     ><span class="mr-1"
                         ><Icon :icon="['fab', 'github']"

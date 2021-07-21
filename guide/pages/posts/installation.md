@@ -53,7 +53,7 @@ Try updating **Android Webview** (Android 5 and 6) or **Chrome** (Android 7+) if
 
 ## Downloading
 
-Download the corresponding file from [here](https://zyrouge.github.io/yukino-app/#download) and install it after the download is complete.
+Download the corresponding file from [here](https://yukino-app.github.io/#download) and install it after the download is complete.
 
 ### Blocked by Windows SmartScreen
 

@@ -12,4 +12,4 @@ You can use the search bar to navigate around easily. Feel free to ask on our Di
 ## Links
 
 -   [Discord](/)
--   [GitHub](https://github.com/zyrouge/yukino-app)
+-   [GitHub](https://github.com/yukino-app/yukino)

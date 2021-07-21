@@ -58,7 +58,7 @@
                             transition
                             duration-300
                         "
-                        href="https://github.com/zyrouge/yukino-app/"
+                        href="https://github.com/yukino-app/yukino/"
                         target="_blank"
                         ><span class="mr-1"
                             ><Icon :icon="['fab', 'github']"
@@ -313,7 +313,7 @@
                             transition
                             duration-300
                         "
-                        href="https://github.com/zyrouge/yukino-app/#readme"
+                        href="https://github.com/yukino-app/yukino/#readme"
                         target="_blank"
                         >readme</a
                     >
@@ -418,13 +418,13 @@ export default defineComponent({
             screenshots: ["desktop", "mobile"].reduce((pv, cv) => {
                 pv.push(
                     ...[
-                        `https://github.com/zyrouge/yukino-app/raw/next/screenshots/${cv}/home.png`,
-                        `https://github.com/zyrouge/yukino-app/raw/next/screenshots/${cv}/search.png`,
-                        `https://github.com/zyrouge/yukino-app/raw/next/screenshots/${cv}/anime.png`,
-                        `https://github.com/zyrouge/yukino-app/raw/next/screenshots/${cv}/episodes.png`,
-                        `https://github.com/zyrouge/yukino-app/raw/next/screenshots/${cv}/sources.png`,
-                        `https://github.com/zyrouge/yukino-app/raw/next/screenshots/${cv}/player.png`,
-                        `https://github.com/zyrouge/yukino-app/raw/next/screenshots/${cv}/manga.png`,
+                        `https://github.com/yukino-app/yukino/raw/next/screenshots/${cv}/home.png`,
+                        `https://github.com/yukino-app/yukino/raw/next/screenshots/${cv}/search.png`,
+                        `https://github.com/yukino-app/yukino/raw/next/screenshots/${cv}/anime.png`,
+                        `https://github.com/yukino-app/yukino/raw/next/screenshots/${cv}/episodes.png`,
+                        `https://github.com/yukino-app/yukino/raw/next/screenshots/${cv}/sources.png`,
+                        `https://github.com/yukino-app/yukino/raw/next/screenshots/${cv}/player.png`,
+                        `https://github.com/yukino-app/yukino/raw/next/screenshots/${cv}/manga.png`,
                     ]
                 );
 
@@ -489,7 +489,7 @@ export default defineComponent({
                 },
             ],
             releases: {
-                web: "https://github.com/zyrouge/yukino-app/releases",
+                web: "https://github.com/yukino-app/yukino/releases",
                 all: "https://api.github.com/repos/zyrouge/yukino-app/releases",
             },
             downloads: [],
