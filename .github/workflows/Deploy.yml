@@ -23,7 +23,7 @@ jobs:
               run: |
                   yarn install
                   cd ./site && yarn install
-                  cd ./guide && yarn install
+                  cd ../guide && yarn install
 
             - name: Build Site
               run: yarn build
