@@ -2,87 +2,82 @@
     "posts": [
         {
             "title": "Home",
-            "url": "/guides/index.html",
+            "url": "/guide/index.html",
             "toc": [
                 {
                     "title": "How do I use this wiki?",
                     "id": "how-do-i-use-this-wiki",
-                    "url": "/guides/index.html#how-do-i-use-this-wiki"
+                    "url": "/guide/index.html#how-do-i-use-this-wiki"
                 },
                 {
                     "title": "Links",
                     "id": "links",
-                    "url": "/guides/index.html#links"
+                    "url": "/guide/index.html#links"
                 }
             ]
         },
         {
             "title": "How does it work?",
-            "url": "/guides/posts/how-it-works.html",
+            "url": "/guide/posts/how-it-works.html",
             "toc": [
                 {
                     "title": "Overview",
                     "id": "overview",
-                    "url": "/guides/posts/how-it-works.html#overview"
+                    "url": "/guide/posts/how-it-works.html#overview"
                 },
                 {
                     "title": "The flow",
                     "id": "the-flow",
-                    "url": "/guides/posts/how-it-works.html#the-flow"
-                },
-                {
-                    "title": "Privacy",
-                    "id": "privacy",
-                    "url": "/guides/posts/how-it-works.html#privacy"
+                    "url": "/guide/posts/how-it-works.html#the-flow"
                 }
             ]
         },
         {
             "title": "Installation",
-            "url": "/guides/posts/installation.html",
+            "url": "/guide/posts/installation.html",
             "toc": [
                 {
                     "title": "Requirements",
                     "id": "requirements",
-                    "url": "/guides/posts/installation.html#requirements"
+                    "url": "/guide/posts/installation.html#requirements"
                 },
                 {
                     "title": "Downloading",
                     "id": "downloading",
-                    "url": "/guides/posts/installation.html#downloading"
+                    "url": "/guide/posts/installation.html#downloading"
                 },
                 {
                     "title": "Windows",
                     "id": "windows",
-                    "url": "/guides/posts/installation.html#windows"
+                    "url": "/guide/posts/installation.html#windows"
                 },
                 {
                     "title": "Mac",
                     "id": "mac",
-                    "url": "/guides/posts/installation.html#mac"
+                    "url": "/guide/posts/installation.html#mac"
                 },
                 {
                     "title": "Linux",
                     "id": "linux",
-                    "url": "/guides/posts/installation.html#linux"
+                    "url": "/guide/posts/installation.html#linux"
                 },
                 {
                     "title": "Android",
                     "id": "android",
-                    "url": "/guides/posts/installation.html#android"
+                    "url": "/guide/posts/installation.html#android"
                 },
                 {
                     "title": "Blocked by Windows SmartScreen",
                     "id": "blocked-by-windows-smartscreen",
-                    "url": "/guides/posts/installation.html#blocked-by-windows-smartscreen"
+                    "url": "/guide/posts/installation.html#blocked-by-windows-smartscreen"
                 },
                 {
                     "title": "Blocked by Android Play Protect",
                     "id": "blocked-by-android-play-protect",
-                    "url": "/guides/posts/installation.html#blocked-by-android-play-protect"
+                    "url": "/guide/posts/installation.html#blocked-by-android-play-protect"
                 }
             ]
         }
     ],
-    "lastUpdated": 1626849152031
+    "lastUpdated": 1634027032298
 }
