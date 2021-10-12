@@ -1,0 +1,9 @@
+<div class="side-content-container">
+	<ul class="side-content-box hide-scrollbar" style="line-height: 1.8; list-style-type: none; padding: 0;">
+		{{
+			data.tocData.map((data) => {
+				return `<li style="margin: 0;"><a href="#${data.id}">${data.title}</a></li>`;
+			}).join("\n");
+		}}
+	</ul>
+</div>
