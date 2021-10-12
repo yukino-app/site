@@ -1,6 +1,6 @@
 import { join } from "path";
 import spawn from "cross-spawn";
-import { copy } from "./utils/copy";
+import { copyFile, copy } from "./utils/copy";
 
 const dest = join(__dirname, "../dist");
 
@@ -15,7 +15,7 @@ const start = () => {
     proc.on("exit", async (code) => {
         if (code == 0) {
             const built = join(__dirname, "../site/dist");
-            await copy(join(built, "index.html"), join(built, "404.html"));
+            await copyFile(join(built, "index.html"), join(built, "404.html"));
             await copy(built, dest);
         }
 
