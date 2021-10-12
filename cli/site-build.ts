@@ -14,7 +14,9 @@ const start = () => {
 
     proc.on("exit", async (code) => {
         if (code == 0) {
-            await copy(join(__dirname, "../site/dist"), dest);
+            const built = join(__dirname, "../site/dist");
+            await copy(join(built, "index.html"), join(built, "404.html"));
+            await copy(built, dest);
         }
 
         process.exit(code ?? 0);
