@@ -1,4 +1,5 @@
 import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
+import { redirects, toRouteRecordRaw } from "./redirects";
 
 export const routes: {
     name?: string;
@@ -15,6 +16,9 @@ export const routes: {
             component: () => import("../pages/Download.vue"),
         },
     },
+    ...redirects.map((x) => ({
+        route: toRouteRecordRaw(...x),
+    })),
 ];
 
 export const router = createRouter({
