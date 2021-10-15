@@ -30,7 +30,7 @@ const getMeta = (
     format: string;
     icon: string;
 } => {
-    const [, pt, format] = /- (.*?)\.(.*?)$/.exec(filename)!;
+    const [pt, format] = filename.split("-").splice(-1)[0].split(".");
     let name: string,
         icon: string,
         platformName: string,
@@ -119,6 +119,10 @@ export const getLatest = async (): Promise<GetLatestResult> => {
 
     return {
         version: latest.tag_name,
-        platforms: Object.values(platforms),
+        platforms: Object.values(platforms).sort((a, b) =>
+            navigator.userAgent.toLowerCase().includes(a.name.toLowerCase())
+                ? -1
+                : 0
+        ),
     };
 };

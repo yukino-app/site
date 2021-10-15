@@ -13,6 +13,12 @@ onMounted(async () => {
 <template>
     <div class="wx wy">
         <Header title="Download" />
+        <p
+            class="text-center text-sm text-gray-700 text-gray-400"
+            v-if="downloads"
+        >
+            {{ downloads.version }}
+        </p>
 
         <p class="mt-4 text-center text-sm text-gray-500" v-if="!downloads">
             Loading...
@@ -65,7 +71,7 @@ onMounted(async () => {
                                 <span class="text-xs">({{ y.format }})</span>
                             </p>
                             <p class="text-xs">
-                                {{ (y.size / 1024).toFixed(1) }} MB
+                                {{ (y.size / 1024 / 1024).toFixed(1) }} MB
                             </p>
                         </div>
                     </button>
