@@ -23,7 +23,7 @@ onMounted(async () => {
         <p class="mt-4 text-center text-sm text-gray-500" v-if="!downloads">
             Loading...
         </p>
-        <div class="mt-10 grid grid-cols-2 gap-8" v-else>
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8" v-else>
             <div
                 class="
                     bg-gradient-to-br
@@ -43,7 +43,16 @@ onMounted(async () => {
                     <p class="text-2xl font-bold">{{ x.name }}</p>
                 </div>
 
-                <div class="mt-4 flex justify-center items-center gap-3">
+                <div
+                    class="
+                        mt-4
+                        flex flex-col
+                        md:flex-row
+                        justify-center
+                        items-center
+                        gap-3
+                    "
+                >
                     <button
                         class="
                             transition
