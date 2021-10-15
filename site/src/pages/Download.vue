@@ -68,7 +68,7 @@ onMounted(async () => {
                             items-center
                             gap-3
                         "
-                        @click="() => (location.href = y.url)"
+                        @click="() => location.assign(y.url)"
                         v-for="y in x.files"
                     >
                         <div class="text-xl">
