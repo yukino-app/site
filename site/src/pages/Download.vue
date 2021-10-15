@@ -53,7 +53,7 @@ onMounted(async () => {
                         gap-3
                     "
                 >
-                    <button
+                    <a
                         class="
                             transition
                             duration-200
@@ -68,7 +68,7 @@ onMounted(async () => {
                             items-center
                             gap-3
                         "
-                        @click="() => location.assign(y.url)"
+                        :href="y.url"
                         v-for="y in x.files"
                     >
                         <div class="text-xl">
@@ -83,7 +83,7 @@ onMounted(async () => {
                                 {{ (y.size / 1024 / 1024).toFixed(1) }} MB
                             </p>
                         </div>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
