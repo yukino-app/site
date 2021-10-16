@@ -1,12 +1,28 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
+import { useRoute, useRouter } from "vue-router";
 import Header from "../components/Header.vue";
-import { GetLatestResult, getLatest } from "../plugins/downloads";
+import { GetLatestResult, getDownloads } from "../plugins/downloads";
+
+const route = useRoute();
+const router = useRouter();
 
 const downloads = ref<GetLatestResult | null>(null);
+const error = ref<string | undefined>();
 
 onMounted(async () => {
-    downloads.value = await getLatest();
+    const version = route.params.version;
+    if (typeof version !== "string") {
+        error.value = "Unknown version";
+        return;
+    }
+
+    try {
+        downloads.value = await getDownloads(route.params.version as string);
+        await router.replace(`/download/${downloads.value.version}/`);
+    } catch (err) {
+        error.value = `Something went wrong: ${err}`;
+    }
 });
 </script>
 
@@ -20,7 +36,13 @@ onMounted(async () => {
             {{ downloads.version }}
         </p>
 
-        <p class="mt-4 text-center text-sm text-gray-500" v-if="!downloads">
+        <p class="mt-4 text-center text-sm text-red-500" v-if="error">
+            {{ error }}
+        </p>
+        <p
+            class="mt-4 text-center text-sm text-gray-500"
+            v-else-if="!downloads"
+        >
             Loading...
         </p>
         <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8" v-else>

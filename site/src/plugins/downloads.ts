@@ -86,18 +86,40 @@ const getMeta = (
     };
 };
 
-export const getLatest = async (): Promise<GetLatestResult> => {
-    const latest: {
+export const getDownloads = async (
+    version: "latest" | string
+): Promise<GetLatestResult> => {
+    let route;
+    switch (version) {
+        case "latest":
+            route = "latest";
+            break;
+
+        default:
+            route = `tags/${version}`;
+            break;
+    }
+
+    const res = await fetch(`${URLs.releasesCdn}/${route}`);
+    if (res.status != 200) {
+        throw new Error(
+            `Failed with status code ${res.status}${
+                res.statusText.length ? ` (${res.statusText})` : ""
+            }`
+        );
+    }
+
+    const body: {
         tag_name: string;
         assets: {
             name: string;
             browser_download_url: string;
             size: number;
         }[];
-    } = await fetch(URLs.releasesCdn).then((res) => res.json());
+    } = await res.json();
 
     const platforms: Record<string, DownloadPlatform> = {};
-    for (const x of latest.assets) {
+    for (const x of body.assets) {
         const meta = getMeta(x.name);
 
         if (!platforms[meta.platform.name]) {
@@ -118,7 +140,7 @@ export const getLatest = async (): Promise<GetLatestResult> => {
     }
 
     return {
-        version: latest.tag_name,
+        version: body.tag_name,
         platforms: Object.values(platforms).sort((a, b) =>
             navigator.userAgent.toLowerCase().includes(a.name.toLowerCase())
                 ? -1

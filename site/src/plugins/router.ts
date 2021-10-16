@@ -13,6 +13,12 @@ export const routes: {
         name: "Download",
         route: {
             path: "/download",
+            redirect: "/download/latest",
+        },
+    },
+    {
+        route: {
+            path: "/download/:version",
             component: () => import("../pages/Download.vue"),
         },
     },

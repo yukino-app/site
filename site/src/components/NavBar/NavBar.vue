@@ -104,7 +104,7 @@ const toggleNav = () => {
                         relative
                         after:transition after:duration-200
                         hover:after:bg-white/20
-                        after:absolute after:inset-0
+                        after:absolute after:inset-0 after:rounded-md
                     "
                     :to="x.path"
                 >
