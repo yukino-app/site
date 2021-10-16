@@ -1,1 +1,0 @@
-import{d as s,N as c,o as r,b as n,h as a}from"./vendor.ced14907.js";const i={class:"wx wy"},d=a("p",{class:"text-center"},"Redirecting you to the right place...",-1),p=[d],h=s({props:{redirect:{type:String,required:!0}},setup(e){const t=e,{redirect:o}=c(t);return location.replace(o.value),(l,_)=>(r(),n("div",i,p))}});export{h as default};
