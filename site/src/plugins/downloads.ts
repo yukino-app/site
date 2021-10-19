@@ -1,3 +1,5 @@
+import marked from "marked";
+import sanitize from "sanitize-html";
 import { URLs } from "./constants";
 
 export interface DownloadFile {
@@ -16,8 +18,26 @@ export interface DownloadPlatform {
 
 export interface GetLatestResult {
     version: string;
+    body: string;
+    releaseURL: string;
     platforms: DownloadPlatform[];
 }
+
+const _platforms = {
+    Android: "Android",
+    "like Mac": "iOS",
+    Win: "Windows",
+    Mac: "MacOS",
+    Linux: "Linux",
+};
+
+const getPlatform = () => {
+    for (const [k, v] of Object.entries(_platforms)) {
+        if (navigator.userAgent.includes(k)) {
+            return v;
+        }
+    }
+};
 
 const getMeta = (
     filename: string
@@ -111,6 +131,8 @@ export const getDownloads = async (
 
     const body: {
         tag_name: string;
+        body: string;
+        html_url: string;
         assets: {
             name: string;
             browser_download_url: string;
@@ -139,12 +161,13 @@ export const getDownloads = async (
         });
     }
 
+    const currentPlatform = getPlatform();
     return {
         version: body.tag_name,
+        body: sanitize(marked(body.body)),
+        releaseURL: body.html_url,
         platforms: Object.values(platforms).sort((a, b) =>
-            navigator.userAgent.toLowerCase().includes(a.name.toLowerCase())
-                ? -1
-                : 0
+            a.name === currentPlatform ? -1 : 0
         ),
     };
 };

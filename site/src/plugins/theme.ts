@@ -7,7 +7,22 @@ export class Themer {
     static listeners: ThemerListener[] = [];
 
     static update() {
-        this.isDark = localStorage.getItem(this.key) !== null;
+        switch (localStorage.getItem(this.key)) {
+            case "0":
+                this.isDark = false;
+                break;
+
+            case "1":
+                this.isDark = true;
+                break;
+
+            default:
+                this.isDark = matchMedia(
+                    "(prefers-color-scheme: dark)"
+                ).matches;
+                break;
+        }
+
         if (this.isDark) {
             document.documentElement.classList.add(this.className);
         } else {
@@ -17,11 +32,7 @@ export class Themer {
     }
 
     static swap() {
-        if (this.isDark) {
-            localStorage.removeItem(this.key);
-        } else {
-            localStorage.setItem(this.key, "");
-        }
+        localStorage.setItem(this.key, this.isDark ? "0" : "1");
         this.update();
     }
 }

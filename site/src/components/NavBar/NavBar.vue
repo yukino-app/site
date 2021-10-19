@@ -59,7 +59,9 @@ const toggleNav = () => {
             class="
                 font-bold
                 text-3xl text-indigo-500
+                dark:text-indigo-500
                 hover:text-indigo-600
+                dark:hover:text-indigo-600
                 transition
                 duration-200
             "
@@ -97,6 +99,9 @@ const toggleNav = () => {
                         via-purple-500
                         to-purple-500
                         text-white
+                        dark:text-white
+                        hover:text-white
+                        dark:hover:text-white
                         rounded-md
                         px-3
                         py-1

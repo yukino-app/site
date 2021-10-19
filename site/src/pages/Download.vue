@@ -30,7 +30,7 @@ onMounted(async () => {
     <div class="wx wy">
         <Header title="Download" />
         <p
-            class="text-center text-sm text-gray-700 text-gray-400"
+            class="text-center text-sm text-gray-700 dark:text-gray-400"
             v-if="downloads"
         >
             {{ downloads.version }}
@@ -45,67 +45,77 @@ onMounted(async () => {
         >
             Loading...
         </p>
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8" v-else>
-            <div
-                class="
-                    bg-gradient-to-br
-                    from-indigo-500
-                    via-purple-500
-                    to-purple-500
-                    text-white
-                    px-6
-                    py-4
-                    rounded-md
-                    text-center
-                "
-                v-for="x in downloads.platforms"
-            >
-                <div class="flex justify-center items-center gap-6">
-                    <p class="text-3xl"><Icon :icon="['fab', x.icon]" /></p>
-                    <p class="text-2xl font-bold">{{ x.name }}</p>
-                </div>
+        <div class="mt-10" v-else>
+            <!-- TODO: Later -->
+            <!-- <div v-html="downloads.body"></div> -->
 
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div
                     class="
-                        mt-4
-                        flex flex-col
-                        md:flex-row
-                        justify-center
-                        items-center
-                        gap-3
+                        bg-gradient-to-br
+                        from-indigo-500
+                        via-purple-500
+                        to-purple-500
+                        text-white
+                        px-6
+                        py-4
+                        rounded-md
+                        text-center
                     "
+                    v-for="x in downloads.platforms"
                 >
-                    <a
+                    <div class="flex justify-center items-center gap-6">
+                        <p class="text-3xl"><Icon :icon="['fab', x.icon]" /></p>
+                        <p class="text-2xl font-bold">{{ x.name }}</p>
+                    </div>
+
+                    <div
                         class="
-                            transition
-                            duration-200
-                            hover:-translate-y-1
-                            bg-white
-                            px-3
-                            py-1
-                            rounded
-                            text-indigo-500
-                            flex
+                            mt-4
+                            flex flex-col
+                            md:flex-row
                             justify-center
                             items-center
                             gap-3
                         "
-                        :href="y.url"
-                        v-for="y in x.files"
                     >
-                        <div class="text-xl">
-                            <Icon :icon="y.icon" />
-                        </div>
-                        <div>
-                            <p class="text-sm">
-                                {{ y.name }}
-                                <span class="text-xs">({{ y.format }})</span>
-                            </p>
-                            <p class="text-xs">
-                                {{ (y.size / 1024 / 1024).toFixed(1) }} MB
-                            </p>
-                        </div>
-                    </a>
+                        <a
+                            class="
+                                transition
+                                duration-200
+                                hover:-translate-y-1
+                                bg-white
+                                px-3
+                                py-1
+                                rounded
+                                text-indigo-500
+                                dark:text-indigo-500
+                                hover:text-indigo-500
+                                dark:hover:text-indigo-500
+                                flex
+                                justify-center
+                                items-center
+                                gap-3
+                            "
+                            :href="y.url"
+                            v-for="y in x.files"
+                        >
+                            <div class="text-xl">
+                                <Icon :icon="y.icon" />
+                            </div>
+                            <div>
+                                <p class="text-sm">
+                                    {{ y.name }}
+                                    <span class="text-xs"
+                                        >({{ y.format }})</span
+                                    >
+                                </p>
+                                <p class="text-xs">
+                                    {{ (y.size / 1024 / 1024).toFixed(1) }} MB
+                                </p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
