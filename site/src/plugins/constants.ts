@@ -3,4 +3,5 @@ export const URLs = {
     github: "https://github.com/yukino-app/yukino",
     patreon: "https://patreon.com/zyrouge",
     releasesCdn: "https://api.github.com/repos/yukino-app/yukino/releases",
+    guide: "/guide",
 };

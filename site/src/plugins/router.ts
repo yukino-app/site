@@ -25,6 +25,12 @@ export const routes: {
     ...redirects.map((x) => ({
         route: toRouteRecordRaw(...x),
     })),
+    {
+        route: {
+            path: "/:pathMatch(.*)*",
+            component: () => import("../pages/404.vue"),
+        },
+    },
 ];
 
 export const router = createRouter({
