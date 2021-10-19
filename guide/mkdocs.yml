@@ -1,0 +1,30 @@
+site_name: Yukino - Guide
+site_url: https://yukino-app.github.io/guide/
+docs_dir: ./content
+
+theme:
+    name: material
+    logo: assets/logo.png
+    palette:
+        - scheme: default
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to dark mode
+        - scheme: slate
+          toggle:
+              icon: material/weather-night
+              name: Switch to light mode
+    font:
+        text: Poppins
+        code: Fira Code
+    features:
+        - navigation.sections
+        - navigation.top
+
+extra_css:
+    - assets/styles.css
+
+markdown_extensions:
+    - admonition
+    - toc:
+          permalink: true

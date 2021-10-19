@@ -1,7 +1,4 @@
----
-title: How does it work?
-template: page
----
+# How does it work?
 
 ## Overview
 
@@ -9,4 +6,4 @@ Yukino does not depend on any kind API service, rather scrapes the sites directl
 
 ## The flow
 
-<img src="{{ data.config.computed_base_url }}/assets/images/flow.png">
+![](./assets/images/flow.png)
