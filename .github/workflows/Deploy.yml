@@ -13,17 +13,20 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v2
+            - uses: actions/setup-node@v2
               with:
                   node-version: 14.x
                   cache: yarn
+
+            - uses: actions/setup-python@v2
+              with:
+                  python-version: 3.x
 
             - name: Install dependencies
               run: |
                   yarn install
                   cd ./site && yarn install
-                  cd ../guide && yarn install
+                  cd ../guide && yarn install && pip install mkdocs-material
 
             - name: Build Site
               run: yarn build
