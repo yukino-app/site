@@ -7,6 +7,6 @@
     "private": true,
     "scripts": {
         "dev": "mkdocs serve",
-        "build": "mkdocs build -c -d ./dist"
+        "build": "mkdocs build -c -d ./dist/guide"
     }
 }
