@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",(()=>{const e=document.getElementById("theme-toggler"),t=(t="dark"===localStorage.getItem("theme"))=>{document.documentElement.classList[t?"add":"remove"]("dark"),e.innerText=t?"🌙":"🌞"};t(),e.addEventListener("click",(()=>{const e="dark"===localStorage.getItem("theme");localStorage.setItem("theme",e?"light":"dark"),t(!e)}))}));
