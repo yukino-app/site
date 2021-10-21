@@ -16,7 +16,6 @@ export const routes: {
         },
     },
     {
-        name: "Download",
         route: {
             path: "/download/:version",
             component: () => import("../pages/Download.vue"),
