@@ -34,7 +34,7 @@ const features: {
 
 <template>
     <div>
-        <div class="relative h-[50rem] md:h-[40rem] lg:h-[50rem]">
+        <div class="relative h-[52rem] md:h-[40rem] lg:h-[50rem]">
             <div
                 class="
                     absolute
@@ -51,13 +51,40 @@ const features: {
                     w-full
                 "
             >
-                <div class="text-center pb-[4rem] lg:pb-[8rem] mx-8">
-                    <p class="text-5xl md:text-6xl font-bold text-white">
+                <div
+                    class="text-center pb-[3rem] md:pb-[4rem] lg:pb-[8rem] mx-8"
+                >
+                    <p class="text-5xl md:text-5xl font-bold text-white">
                         Yukino
                     </p>
-                    <p class="mt-6 md:text-lg text-white italic">
+                    <p class="mt-4 text-white italic">
                         An extension based <b>Anime</b> & <b>Manga</b> client.
                     </p>
+
+                    <div class="mt-6">
+                        <router-link
+                            class="
+                                backdrop-filter backdrop-blur-lg
+                                bg-white/25
+                                hover:bg-white/30 hover:shadow
+                                rounded
+                                hover:-translate-y-1
+                                transition
+                                duration-200
+                                text-white
+                                dark:text-white
+                                hover:text-white
+                                dark:hover:text-white
+                                px-3
+                                py-1
+                                inline-block
+                            "
+                            to="/download"
+                        >
+                            <Icon class="mr-1 text-sm" icon="download" />
+                            Get Yukino
+                        </router-link>
+                    </div>
                 </div>
             </div>
 

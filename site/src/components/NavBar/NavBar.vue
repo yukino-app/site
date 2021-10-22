@@ -27,8 +27,9 @@ const routes: NavLinkItem[] = [
 
 const highlighted: {
     text: string;
+    icon: string;
     path: string;
-}[] = [{ text: "Get Yukino", path: "/download" }];
+}[] = [{ text: "Get Yukino", icon: "download", path: "/download" }];
 
 const isDark = ref(Themer.isDark);
 Themer.listeners.push((value) => {
@@ -114,7 +115,7 @@ const toggleNav = () => {
                     "
                     :to="x.path"
                 >
-                    <Icon class="mr-1 text-sm" icon="download" />
+                    <Icon class="mr-1 text-sm" :icon="x.icon" />
                     {{ x.text }}
                 </router-link>
             </div>
