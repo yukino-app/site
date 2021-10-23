@@ -92,10 +92,14 @@ onMounted(async () => {
                         <ul class="list-disc ml-7">
                             <li class="mb-1" v-for="y in x">
                                 <p>
-                                    <span class="underline" v-if="y.commit.cat"
+                                    <span
+                                        class="underline mr-1"
+                                        v-if="y.commit.cat"
                                         >{{ y.commit.cat }}:</span
                                     >
-                                    {{ y.commit.msg }}
+
+                                    <span v-html="y.commit.msg"></span>
+
                                     (<a :href="y.commit.url">{{
                                         y.commit.sha
                                     }}</a

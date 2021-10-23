@@ -1,3 +1,5 @@
+import marked from "marked";
+import sanitize from "sanitize-html";
 import { URLs } from "./constants";
 
 export interface DownloadFile {
@@ -58,13 +60,52 @@ export class Changelogs {
         },
     };
 
-    static tryParse(json?: string) {
+    static tryParseFromBody(body: string) {
         try {
-            if (json) {
-                const parsed = JSON.parse(json);
-                return new Changelogs(parsed.commits);
+            if (body.includes("<!-- generated -->")) {
+                const commits: Commits = {
+                    feat: [],
+                    fix: [],
+                    refactor: [],
+                    perf: [],
+                };
+
+                for (const x of Object.keys(commits) as (keyof Commits)[]) {
+                    for (const y of body.matchAll(
+                        RegExp(
+                            `<!-- {${x}} -->([\\S\\s]+)<!-- {/${x}} -->`,
+                            "g"
+                        )
+                    )) {
+                        if (y[1]) {
+                            for (const z of y[1].matchAll(
+                                /- \[`([\w]{6})`\]\(([^)]+)\) (\*\*([^*]+)\*\*:)?(.*)/g
+                            )) {
+                                commits[x].push({
+                                    commit: {
+                                        sha: z[1].trim(),
+                                        url: z[2].trim(),
+                                        type: x,
+                                        cat: z[4]?.trim(),
+                                        msg: sanitize(
+                                            marked.parseInline(z[5].trim())
+                                        ),
+                                        stats: {
+                                            additions: 0,
+                                            deletions: 0,
+                                        },
+                                    },
+                                });
+                            }
+                        }
+                    }
+                }
+
+                return new Changelogs(commits);
             }
-        } catch (_) {}
+        } catch (err) {
+            console.error(err);
+        }
     }
 }
 
@@ -214,10 +255,9 @@ export const getDownloads = async (
     }
 
     const currentPlatform = getPlatform();
-    const changelogsJson = body.body.match(/<!-- changelogs: ({.*}) -->/)?.[1];
     return {
         version: body.tag_name,
-        changelogs: Changelogs.tryParse(changelogsJson),
+        changelogs: Changelogs.tryParseFromBody(body.body),
         releaseURL: body.html_url,
         platforms: Object.values(platforms).sort((a, b) =>
             a.name === currentPlatform ? -1 : 0

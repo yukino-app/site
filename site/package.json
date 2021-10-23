@@ -11,10 +11,14 @@
         "@fortawesome/free-brands-svg-icons": "^5.15.4",
         "@fortawesome/free-solid-svg-icons": "^5.15.4",
         "@fortawesome/vue-fontawesome": "^3.0.0-4",
+        "marked": "^3.0.7",
+        "sanitize-html": "^2.5.2",
         "vue": "^3.2.16",
         "vue-router": "4"
     },
     "devDependencies": {
+        "@types/marked": "^3.0.2",
+        "@types/sanitize-html": "^2.5.0",
         "@vitejs/plugin-vue": "^1.9.2",
         "autoprefixer": "^10.3.7",
         "postcss": "^8.3.9",
