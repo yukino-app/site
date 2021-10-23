@@ -1,0 +1,1 @@
+import{_ as t}from"./index.3c99b357.js";import{o,b as s,h as e}from"./vendor.d619cb3d.js";const c={},n=e("div",{class:"wx wy text-center"},[e("p",{class:"text-8xl md:text-9xl font-bold"},"404"),e("p",{class:"mt-8"}," Seems like someone has guided you to the wrong place. ")],-1),r=[n];function a(d,l){return o(),s("div",null,r)}var m=t(c,[["render",a]]);export{m as default};
