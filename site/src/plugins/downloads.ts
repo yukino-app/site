@@ -1,5 +1,3 @@
-import marked from "marked";
-import sanitize from "sanitize-html";
 import { URLs } from "./constants";
 
 export interface DownloadFile {
@@ -16,9 +14,63 @@ export interface DownloadPlatform {
     files: DownloadFile[];
 }
 
+export interface Commit {
+    type: "feat" | "refactor" | "fix" | "perf";
+    cat?: string;
+    msg: string;
+    stats: {
+        additions: number;
+        deletions: number;
+    };
+    sha: string;
+    url: string;
+}
+
+export type Commits = {
+    [k in Commit["type"]]: { commit: Commit }[];
+};
+
+export class Changelogs {
+    constructor(public readonly commits: Commits) {}
+
+    static styles: Record<
+        Commit["type"],
+        {
+            title: string;
+            color: string;
+        }
+    > = {
+        feat: {
+            title: "Features",
+            color: "bg-green-500",
+        },
+        refactor: {
+            title: "Changes",
+            color: "bg-yellow-500",
+        },
+        fix: {
+            title: "Bug Fixes",
+            color: "bg-red-500",
+        },
+        perf: {
+            title: "Improvements",
+            color: "bg-purple-400",
+        },
+    };
+
+    static tryParse(json?: string) {
+        try {
+            if (json) {
+                const parsed = JSON.parse(json);
+                return new Changelogs(parsed.commits);
+            }
+        } catch (_) {}
+    }
+}
+
 export interface GetLatestResult {
     version: string;
-    body: string;
+    changelogs?: Changelogs;
     releaseURL: string;
     platforms: DownloadPlatform[];
 }
@@ -162,9 +214,10 @@ export const getDownloads = async (
     }
 
     const currentPlatform = getPlatform();
+    const changelogsJson = body.body.match(/<!-- changelogs: ({.*}) -->/)?.[1];
     return {
         version: body.tag_name,
-        body: sanitize(marked(body.body)),
+        changelogs: Changelogs.tryParse(changelogsJson),
         releaseURL: body.html_url,
         platforms: Object.values(platforms).sort((a, b) =>
             a.name === currentPlatform ? -1 : 0

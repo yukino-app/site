@@ -1,14 +1,29 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import Header from "../components/Header.vue";
-import { GetLatestResult, getDownloads } from "../plugins/downloads";
+import {
+    GetLatestResult,
+    Changelogs,
+    Commit,
+    Commits,
+    getDownloads,
+} from "../plugins/downloads";
 
 const route = useRoute();
 const router = useRouter();
 
 const downloads = ref<GetLatestResult | null>(null);
 const error = ref<string | undefined>();
+
+const commits = computed(() =>
+    downloads.value?.changelogs
+        ? (Object.entries(downloads.value.changelogs.commits).filter(
+              ([k, x]) => x.length
+          ) as [Commit["type"], Commits["feat"]][])
+        : null
+);
+const commitStyles = Changelogs.styles;
 
 onMounted(async () => {
     const version = route.params.version;
@@ -46,8 +61,51 @@ onMounted(async () => {
             Loading...
         </p>
         <div class="mt-10" v-else>
-            <!-- TODO: Later -->
-            <!-- <div v-html="downloads.body"></div> -->
+            <div
+                class="
+                    bg-gray-100
+                    dark:bg-gray-800
+                    px-4
+                    py-3
+                    rounded
+                    flex flex-col
+                    gap-4
+                "
+                v-if="
+                    downloads.changelogs &&
+                    Object.values(downloads.changelogs.commits).some(
+                        (x) => x.length != 0
+                    )
+                "
+            >
+                <div class="flex-grow" v-for="[k, x] in commits">
+                    <div v-if="x.length">
+                        <p
+                            :class="[
+                                'text-white font-bold mb-1 rounded inline-block px-1.5 py-0.5 text-sm',
+                                commitStyles[k].color,
+                            ]"
+                        >
+                            {{ commitStyles[k].title }}
+                        </p>
+
+                        <ul class="list-disc ml-7">
+                            <li class="mb-1" v-for="y in x">
+                                <p>
+                                    <span class="underline" v-if="y.commit.cat"
+                                        >{{ y.commit.cat }}:</span
+                                    >
+                                    {{ y.commit.msg }}
+                                    (<a :href="y.commit.url">{{
+                                        y.commit.sha
+                                    }}</a
+                                    >)
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
             <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div
