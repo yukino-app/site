@@ -116,87 +116,94 @@ export interface GetLatestResult {
     platforms: DownloadPlatform[];
 }
 
-const _platforms = {
-    Android: "Android",
-    "like Mac": "iOS",
-    Win: "Windows",
-    Mac: "MacOS",
-    Linux: "Linux",
-};
-
-const getPlatform = () => {
-    for (const [k, v] of Object.entries(_platforms)) {
-        if (navigator.userAgent.includes(k)) {
-            return v;
-        }
+const platforms: Record<
+    string,
+    {
+        name: string;
+        icon: string;
+        userAgent: string;
+        formats: {
+            ext: string;
+            icon: string;
+        }[];
     }
+> = {
+    android: {
+        name: "Android",
+        icon: "android",
+        userAgent: "Android",
+        formats: [
+            {
+                ext: "apk",
+                icon: "box-open",
+            },
+        ],
+    },
+    windows: {
+        name: "Windows",
+        icon: "windows",
+        userAgent: "Win",
+        formats: [
+            {
+                ext: "exe",
+                icon: "box-open",
+            },
+            {
+                ext: "zip",
+                icon: "archive",
+            },
+        ],
+    },
+    linux: {
+        name: "Linux",
+        icon: "linux",
+        userAgent: "Linux",
+        formats: [
+            {
+                ext: "AppImage",
+                icon: "box-open",
+            },
+        ],
+    },
 };
 
 const getMeta = (
     filename: string
-): {
-    name: string;
-    platform: {
-        name: string;
-        icon: string;
-    };
-    format: string;
-    icon: string;
-} => {
+):
+    | {
+          name: string;
+          platform: {
+              name: string;
+              icon: string;
+          };
+          format: string;
+          icon: string;
+      }
+    | undefined => {
     const [pt, format] = filename.split("-").splice(-1)[0].split(".");
-    let name: string,
-        icon: string,
-        platformName: string,
-        platformIcon: string = pt;
 
-    switch (format) {
-        case "zip":
-            name = "Archive";
-            icon = "archive";
-            break;
+    const config = platforms[pt];
+    const ext = config?.formats.find((x) => x.ext === format);
 
-        default:
-            name = "Setup";
-            icon = "box-open";
-            break;
+    if (config && ext) {
+        return {
+            name: config.name,
+            platform: {
+                name: config.name,
+                icon: config.icon,
+            },
+            format: ext.ext,
+            icon: ext.icon,
+        };
     }
+};
 
-    switch (pt) {
-        case "windows":
-            platformName = "Windows";
-            break;
-
-        case "linux":
-            platformName = "Linux";
-            break;
-
-        case "android":
-            platformName = "Android";
-            break;
-
-        case "macos":
-            platformName = "MacOS";
-            platformIcon = "apple";
-            break;
-
-        case "ios":
-            platformName = "iOS";
-            platformIcon = "apple";
-            break;
-
-        default:
-            throw new Error("Unknown Platform");
+const getPlatform = () => {
+    for (const x of Object.values(platforms)) {
+        if (navigator.userAgent.includes(x.userAgent)) {
+            return x.name;
+        }
     }
-
-    return {
-        name,
-        platform: {
-            name: platformName,
-            icon: platformIcon,
-        },
-        format,
-        icon,
-    };
 };
 
 export const getDownloads = async (
@@ -237,21 +244,23 @@ export const getDownloads = async (
     for (const x of body.assets) {
         const meta = getMeta(x.name);
 
-        if (!platforms[meta.platform.name]) {
-            platforms[meta.platform.name] = {
-                name: meta.platform.name,
-                icon: meta.platform.icon,
-                files: [],
-            };
-        }
+        if (meta) {
+            if (!platforms[meta.platform.name]) {
+                platforms[meta.platform.name] = {
+                    name: meta.platform.name,
+                    icon: meta.platform.icon,
+                    files: [],
+                };
+            }
 
-        platforms[meta.platform.name].files.push({
-            name: meta.name,
-            format: meta.format,
-            size: x.size,
-            url: x.browser_download_url,
-            icon: meta.icon,
-        });
+            platforms[meta.platform.name].files.push({
+                name: meta.name,
+                format: meta.format,
+                size: x.size,
+                url: x.browser_download_url,
+                icon: meta.icon,
+            });
+        }
     }
 
     const currentPlatform = getPlatform();
