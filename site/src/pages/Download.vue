@@ -82,7 +82,7 @@ onMounted(async () => {
                     <div v-if="x.length">
                         <p
                             :class="[
-                                'text-white font-bold mb-1 rounded inline-block px-1.5 py-0.5 text-sm',
+                                'text-white font-bold mb-2 rounded inline-block px-1.5 py-0.5 text-sm',
                                 commitStyles[k].color,
                             ]"
                         >
