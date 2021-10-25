@@ -123,6 +123,7 @@ const platforms: Record<
         icon: string;
         userAgent: string;
         formats: {
+            name: string;
             ext: string;
             icon: string;
         }[];
@@ -134,6 +135,7 @@ const platforms: Record<
         userAgent: "Android",
         formats: [
             {
+                name: "Apk",
                 ext: "apk",
                 icon: "box-open",
             },
@@ -145,10 +147,12 @@ const platforms: Record<
         userAgent: "Win",
         formats: [
             {
+                name: "Installer",
                 ext: "exe",
                 icon: "box-open",
             },
             {
+                name: "Archive",
                 ext: "zip",
                 icon: "archive",
             },
@@ -160,6 +164,7 @@ const platforms: Record<
         userAgent: "Linux",
         formats: [
             {
+                name: "AppImage",
                 ext: "AppImage",
                 icon: "box-open",
             },
@@ -187,7 +192,7 @@ const getMeta = (
 
     if (config && ext) {
         return {
-            name: config.name,
+            name: ext.name,
             platform: {
                 name: config.name,
                 icon: config.icon,
