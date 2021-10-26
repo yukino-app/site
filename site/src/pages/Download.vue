@@ -2,25 +2,24 @@
 import { ref, computed, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import Header from "../components/Header.vue";
+import { IRelease, getRelease } from "../plugins/releases";
 import {
-    GetLatestResult,
-    Changelogs,
+    ICommitType,
     Commit,
-    Commits,
-    getDownloads,
-} from "../plugins/downloads";
+    Changelogs,
+} from "../plugins/releases/changelogs";
 
 const route = useRoute();
 const router = useRouter();
 
-const downloads = ref<GetLatestResult | null>(null);
+const release = ref<IRelease | null>(null);
 const error = ref<string | undefined>();
 
 const commits = computed(() =>
-    downloads.value?.changelogs
-        ? (Object.entries(downloads.value.changelogs.commits).filter(
+    release.value?.changelogs
+        ? (Object.entries(release.value.changelogs.commits).filter(
               ([k, x]) => x.length
-          ) as [Commit["type"], Commits["feat"]][])
+          ) as [ICommitType, Commit[]][])
         : null
 );
 const commitStyles = Changelogs.styles;
@@ -33,8 +32,8 @@ onMounted(async () => {
     }
 
     try {
-        downloads.value = await getDownloads(route.params.version as string);
-        await router.replace(`/download/${downloads.value.version}/`);
+        release.value = await getRelease(route.params.version as string);
+        await router.replace(`/download/${release.value.version}/`);
     } catch (err) {
         error.value = `Something went wrong: ${err}`;
     }
@@ -46,18 +45,15 @@ onMounted(async () => {
         <Header title="Download" />
         <p
             class="text-center text-sm text-gray-700 dark:text-gray-400"
-            v-if="downloads"
+            v-if="release"
         >
-            {{ downloads.version }}
+            {{ release.version }}
         </p>
 
         <p class="mt-4 text-center text-sm text-red-500" v-if="error">
             {{ error }}
         </p>
-        <p
-            class="mt-4 text-center text-sm text-gray-500"
-            v-else-if="!downloads"
-        >
+        <p class="mt-4 text-center text-sm text-gray-500" v-else-if="!release">
             Loading...
         </p>
         <div class="mt-10" v-else>
@@ -72,8 +68,8 @@ onMounted(async () => {
                     gap-4
                 "
                 v-if="
-                    downloads.changelogs &&
-                    Object.values(downloads.changelogs.commits).some(
+                    release.changelogs &&
+                    Object.values(release.changelogs.commits).some(
                         (x) => x.length != 0
                     )
                 "
@@ -92,17 +88,13 @@ onMounted(async () => {
                         <ul class="list-disc ml-7">
                             <li class="mb-1" v-for="y in x">
                                 <p>
-                                    <span
-                                        class="underline mr-1"
-                                        v-if="y.commit.cat"
-                                        >{{ y.commit.cat }}:</span
+                                    <span class="underline mr-1" v-if="y.cat"
+                                        >{{ y.cat }}:</span
                                     >
 
-                                    <span v-html="y.commit.msg"></span>
+                                    <span v-html="y.msg"></span>
 
-                                    (<a :href="y.commit.url">{{
-                                        y.commit.sha
-                                    }}</a
+                                    (<a :href="y.url">{{ y.sha }}</a
                                     >)
                                 </p>
                             </li>
@@ -124,7 +116,7 @@ onMounted(async () => {
                         rounded-md
                         text-center
                     "
-                    v-for="x in downloads.platforms"
+                    v-for="x in release.platforms"
                 >
                     <div class="flex justify-center items-center gap-6">
                         <p class="text-3xl"><Icon :icon="['fab', x.icon]" /></p>
