@@ -27,19 +27,17 @@ export interface IRelease {
     platforms: IReleasePlatform[];
 }
 
-const getMeta = (
-    filename: string
-):
-    | {
-          name: string;
-          platform: {
-              name: string;
-              icon: string;
-          };
-          format: string;
-          icon: string;
-      }
-    | undefined => {
+export interface IReleaseFileMeta {
+    name: string;
+    platform: {
+        name: string;
+        icon: string;
+    };
+    format: string;
+    icon: string;
+}
+
+export const getMeta = (filename: string): IReleaseFileMeta | undefined => {
     const [pt, format] = filename.split("-").splice(-1)[0].split(".");
 
     const config = tryGetPlatformConfig(pt);
