@@ -1,5 +1,5 @@
-site_name: Yukino - Guide
-site_url: https://yukino-app.github.io/guide/
+site_name: Yukino Wiki
+site_url: https://yukino-app.github.io/wiki/
 docs_dir: ./content
 
 theme:

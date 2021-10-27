@@ -3,8 +3,9 @@ import { URLs } from "./constants";
 
 export const redirects: [string, string][] = [
     ["/discord", URLs.discord],
-    ["/guide", URLs.guide],
-    ["/guides", URLs.guide],
+    ["/guide", URLs.wiki],
+    ["/guides", URLs.wiki],
+    ["/wiki", URLs.wiki],
 ];
 
 export const toRouteRecordRaw = (route: string, url: string) => {

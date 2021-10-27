@@ -26,7 +26,7 @@ jobs:
               run: |
                   yarn install
                   cd ./site && yarn install
-                  cd ../guide && yarn install && pip install mkdocs-material
+                  cd ../wiki && yarn install && pip install mkdocs-material
 
             - name: Build Site
               run: yarn build

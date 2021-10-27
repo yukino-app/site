@@ -1,0 +1,14 @@
+{
+    "name": "@yukino-app/wiki",
+    "version": "0.0.0",
+    "author": "Zyrouge",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "dev": "mkdocs serve",
+        "build": "rimraf ./dist && mkdocs build -c -d ./dist/wiki"
+    },
+    "devDependencies": {
+        "rimraf": "^3.0.2"
+    }
+}

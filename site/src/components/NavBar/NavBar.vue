@@ -14,7 +14,7 @@ const routes: NavLinkItem[] = [
             ext: false,
         })),
     ...[
-        ["Guides", URLs.guide],
+        ["Wiki", URLs.wiki],
         ["GitHub", URLs.github],
         ["Discord", URLs.discord],
         ["Patreon", URLs.patreon],

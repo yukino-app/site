@@ -1,9 +1,0 @@
-:root {
-    --primary: #6366f1;
-    --md-primary-fg-color: var(--primary);
-    --md-accent-fg-color: var(--primary);
-}
-
-.md-main {
-    padding-bottom: 2rem;
-}

@@ -4,7 +4,7 @@ import spawn from "cross-spawn";
 const start = () => {
     const proc = spawn("yarn", ["dev"], {
         env: process.env,
-        cwd: join(__dirname, "../guide"),
+        cwd: join(__dirname, "../wiki"),
         shell: true,
         stdio: "inherit",
     });
