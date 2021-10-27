@@ -2,6 +2,7 @@
     --primary: #6366f1;
     --secondary: #18181b;
     --secondary--light: #27272a;
+    --secondary--lighter: #3f3f46;
 
     --md-primary-fg-color: var(--primary);
     --md-accent-fg-color: var(--primary);
@@ -10,6 +11,15 @@
 [data-md-color-scheme="slate"] {
     --md-default-bg-color: var(--secondary--light);
     --md-footer-bg-color: var(--secondary);
+    --md-code-bg-color: var(--secondary--lighter);
+}
+
+[data-md-color-scheme="slate"] .md-clipboard {
+    color: var(--md-default-fg-color--lighter);
+}
+
+[data-md-color-scheme="slate"] .md-clipboard:hover {
+    color: var(--md-default-fg-color--light);
 }
 
 .md-main {

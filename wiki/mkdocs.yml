@@ -18,8 +18,8 @@ theme:
         text: Poppins
         code: Fira Code
     features:
-        - navigation.sections
         - navigation.top
+        - navigation.tabs
 
 extra_css:
     - assets/styles.css
@@ -28,3 +28,11 @@ markdown_extensions:
     - admonition
     - toc:
           permalink: true
+
+copyright: Licensed under GPL-3.0
+extra:
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/yukino-app/
+        - icon: fontawesome/brands/discord
+          link: https://yukino-app.github.io/discord
