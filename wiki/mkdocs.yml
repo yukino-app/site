@@ -28,6 +28,10 @@ markdown_extensions:
     - admonition
     - toc:
           permalink: true
+    - pymdownx.highlight
+    - pymdownx.inlinehilite
+    - pymdownx.superfences
+    - pymdownx.snippets
 
 copyright: Licensed under GPL-3.0
 extra:
