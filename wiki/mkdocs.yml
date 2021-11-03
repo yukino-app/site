@@ -16,8 +16,8 @@ theme:
               icon: material/weather-night
               name: Switch to light mode
     font:
-        text: Poppins
-        code: Fira Code
+        text: Sora
+        code: Azeret Mono
     features:
         - navigation.top
         - navigation.tabs
