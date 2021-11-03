@@ -16,7 +16,7 @@ theme:
               icon: material/weather-night
               name: Switch to light mode
     font:
-        text: Sora
+        text: DM Sans
         code: Azeret Mono
     features:
         - navigation.top
