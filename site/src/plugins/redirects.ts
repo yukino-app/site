@@ -6,6 +6,7 @@ export const redirects: [string, string][] = [
     ["/guide", URLs.wiki],
     ["/guides", URLs.wiki],
     ["/wiki", URLs.wiki],
+    ["/patreon", URLs.patreon],
 ];
 
 export const toRouteRecordRaw = (route: string, url: string) => {
