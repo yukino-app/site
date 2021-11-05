@@ -5,7 +5,7 @@ Yukino follows certain guidelines to maintain code integrity and uniformity. It 
 ## Before-hand
 
 -   I appreciate any contributions to any of the repository and every single feedback. And don't feel bad if your issue or pull request was closed. 🙂
--   Always check if it the right repository before opening an issue or a pull request.
+-   Always check if it the right repository before opening an issue or a pull request. You can check for the correct repository [here](./repos.md).
 -   Check if there is a similar issue or a pull request before committing.
 -   Refer similar or other issues or pull requests if it's your first time.
 
