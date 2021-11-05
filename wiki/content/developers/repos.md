@@ -9,5 +9,5 @@ Repository | Description | Feedback
 [yukino-app/official-extensions](https://github.com/yukino-app/official-extensions) | Source code of all the officially supported extensions. | Issues regarding problems with the officially supported extensions.
 [yukino-app/yukino-app.github.io](https://github.com/yukino-app/yukino-app.github.io) | Source code of the website & wiki. | -
 
-!!! warn
+!!! warning
     Opening issues in wrong repository will result in the issue being marked as invalid or will be moved to the corresponding repository.
