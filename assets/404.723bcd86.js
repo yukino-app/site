@@ -1,0 +1,1 @@
+import{a as t}from"./index.daa93479.js";import{b as s,e as o,f as e}from"./vendor.fb53f9be.js";const a={},c=e("div",{class:"wx wy text-center"},[e("p",{class:"text-8xl md:text-9xl font-bold"},"404"),e("p",{class:"mt-8"}," Seems like someone has guided you to the wrong place. ")],-1),n=[c];function r(d,l){return s(),o("div",null,n)}var i=t(a,[["render",r]]);export{i as default};
