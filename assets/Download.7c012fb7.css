@@ -1,0 +1,1 @@
+:root{--platform-icon-size: 2rem}.__platform_icon__>svg{height:var(--platform-icon-size)!important;width:var(--platform-icon-size)!important}#changelogs li{padding-top:.25rem;padding-bottom:.25rem}#changelogs li>ul{padding-top:.25rem}#changelogs li>span{margin-left:-.5rem}

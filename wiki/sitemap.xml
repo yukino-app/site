@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://yukino-app.github.io/wiki/</loc>
-         <lastmod>2021-11-30</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-app.github.io/wiki/developers/contribution/</loc>
-         <lastmod>2021-11-30</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-app.github.io/wiki/developers/repos/</loc>
-         <lastmod>2021-11-30</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-app.github.io/wiki/developers/setting-up-yukino-locally/</loc>
-         <lastmod>2021-11-30</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-app.github.io/wiki/developers/extensions/configuration/</loc>
-         <lastmod>2021-11-30</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-app.github.io/wiki/reference/how-it-works/</loc>
-         <lastmod>2021-11-30</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-app.github.io/wiki/reference/installation/</loc>
-         <lastmod>2021-11-30</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

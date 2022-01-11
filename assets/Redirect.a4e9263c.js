@@ -1,1 +1,0 @@
-import{d as s,A as r,b as c,e as n,f as a}from"./vendor.fb53f9be.js";const i={class:"wx wy"},d=a("p",{class:"text-center"},"Redirecting you to the right place...",-1),p=[d],u=s({props:{redirect:{type:String,required:!0}},setup(e){const t=e,{redirect:o}=r(t);return location.replace(o.value),(l,_)=>(c(),n("div",i,p))}});export{u as default};
