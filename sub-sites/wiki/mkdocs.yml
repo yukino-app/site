@@ -1,0 +1,43 @@
+site_name: Yukino Wiki
+site_url: https://yukino-app.github.io/wiki/
+docs_dir: ./content
+
+theme:
+    name: material
+    logo: assets/logo.png
+    favicon: assets/logo.png
+    palette:
+        - scheme: default
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to dark mode
+        - scheme: slate
+          toggle:
+              icon: material/weather-night
+              name: Switch to light mode
+    font:
+        text: DM Sans
+        code: Roboto Mono
+    features:
+        - navigation.top
+        - navigation.tabs
+
+extra_css:
+    - assets/styles.css
+
+markdown_extensions:
+    - admonition
+    - toc:
+          permalink: true
+    - pymdownx.highlight
+    - pymdownx.inlinehilite
+    - pymdownx.superfences
+    - pymdownx.snippets
+
+copyright: Licensed under GPL-3.0
+extra:
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/yukino-app/
+        - icon: fontawesome/brands/discord
+          link: https://yukino-app.github.io/discord
