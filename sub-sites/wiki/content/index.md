@@ -8,5 +8,5 @@ You can use the search bar to navigate around easily. Feel free to ask on our Di
 
 ## Links
 
--   [Discord](https://yukino-app.github.io/discord)
--   [GitHub](https://github.com/yukino-app/yukino)
+-   [Discord](https://yukino-org.github.io/discord)
+-   [GitHub](https://github.com/yukino-org)

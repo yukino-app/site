@@ -29,12 +29,12 @@ jobs:
               with:
                   python-version: 3.x
 
-            - name: Install dependencies
+            - name: 🚧 Install dependencies
               run: |
                   yarn
                   yarn setup
 
-            - name: Build site
+            - name: 👷 Build site
               run: yarn build
 
             - name: 🚀 Deploy

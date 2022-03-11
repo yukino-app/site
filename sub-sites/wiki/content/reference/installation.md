@@ -35,7 +35,7 @@
 
 ## Downloading
 
-Download the corresponding file from [here](https://yukino-app.github.io/download/latest) and install it after the download is complete.
+Download the corresponding file from [here](https://yukino-org.github.io/download/latest) and install it after the download is complete.
 
 ### Blocked by Windows SmartScreen
 

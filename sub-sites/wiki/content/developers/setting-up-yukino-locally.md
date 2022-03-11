@@ -13,7 +13,7 @@ These tools are necessary to run Yukino locally if you wish to.
 ### Cloning the repository
 
 ```bash
-git clone https://github.com/yukino-app/yukino.git
+git clone https://github.com/yukino-org/yukino.git
 cd yukino
 ```
 

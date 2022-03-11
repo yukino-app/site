@@ -1,5 +1,5 @@
 site_name: Yukino Wiki
-site_url: https://yukino-app.github.io/wiki/
+site_url: https://yukino-org.github.io/wiki/
 docs_dir: ./content
 
 theme:
@@ -38,6 +38,6 @@ copyright: Licensed under GPL-3.0
 extra:
     social:
         - icon: fontawesome/brands/github
-          link: https://github.com/yukino-app/
+          link: https://github.com/yukino-org/
         - icon: fontawesome/brands/discord
-          link: https://yukino-app.github.io/discord
+          link: https://yukino-org.github.io/discord
