@@ -2,37 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://yukino-org.github.io/wiki/</loc>
-         <lastmod>2022-03-11</lastmod>
+         <lastmod>2022-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/developers/contribution/</loc>
-         <lastmod>2022-03-11</lastmod>
+         <lastmod>2022-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://yukino-org.github.io/wiki/developers/repos/</loc>
-         <lastmod>2022-03-11</lastmod>
+         <loc>https://yukino-org.github.io/wiki/tenka/disclaimer/</loc>
+         <lastmod>2022-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://yukino-org.github.io/wiki/developers/setting-up-yukino-locally/</loc>
-         <lastmod>2022-03-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://yukino-org.github.io/wiki/developers/extensions/configuration/</loc>
-         <lastmod>2022-03-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://yukino-org.github.io/wiki/reference/how-it-works/</loc>
-         <lastmod>2022-03-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://yukino-org.github.io/wiki/reference/installation/</loc>
-         <lastmod>2022-03-11</lastmod>
+         <loc>https://yukino-org.github.io/wiki/tenka/store/</loc>
+         <lastmod>2022-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
