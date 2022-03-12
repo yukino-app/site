@@ -1,6 +1,6 @@
 # Disclaimer
 
--   The information provided by this is for personal use only based on the user's risk.
+-   The information provided by this project is solely for personal use only.
 -   The core aim of this project is to efficiently parse sites without any advertisements.
 -   The content served by the modules has no control.
 -   <u>The developer of this organization does not take any responsibility for the content displayed by the modules and is not affliated with them by any means.</u>
