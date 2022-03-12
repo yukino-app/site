@@ -1,4 +1,4 @@
-# Home
+# Getting Started
 
 ## How do I use this wiki?
 

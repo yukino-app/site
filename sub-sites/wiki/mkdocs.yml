@@ -1,4 +1,4 @@
-site_name: Yukino Wiki
+site_name: Wiki (Yukino Org)
 site_url: https://yukino-org.github.io/wiki/
 docs_dir: ./content
 
@@ -20,7 +20,7 @@ theme:
         code: Roboto Mono
     features:
         - navigation.top
-        - navigation.tabs
+        - navigation.sections
 
 extra_css:
     - assets/styles.css
@@ -33,6 +33,7 @@ markdown_extensions:
     - pymdownx.inlinehilite
     - pymdownx.superfences
     - pymdownx.snippets
+    - tables
 
 copyright: Licensed under GPL-3.0
 extra:

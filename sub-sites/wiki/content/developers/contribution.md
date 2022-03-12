@@ -1,11 +1,11 @@
 # Contribution
 
-Yukino follows certain guidelines to maintain code integrity and uniformity. It is _required_ to follow these guidelines in order for you to contribute.
+Yukino Org follows certain guidelines to maintain code integrity and uniformity. It is _required_ to follow these guidelines in order for you to contribute.
 
 ## Before-hand
 
 -   I appreciate any contributions to any of the repository and every single feedback. And don't feel bad if your issue or pull request was closed. 🙂
--   Always check if it the right repository before opening an issue or a pull request. You can check for the correct repository [here](./repos.md).
+-   Always check if it the right repository before opening an issue or a pull request.
 -   Check if there is a similar issue or a pull request before committing.
 -   Refer similar or other issues or pull requests if it's your first time.
 
@@ -19,3 +19,8 @@ Yukino follows certain guidelines to maintain code integrity and uniformity. It 
 -   Always ask for reviews before asking to merge a pull request.
 -   Always try to use the pre-defined templates for issues and pull requests. Make sure to fill it completely. Invalid issues or pull requests will be _closed_.
 -   Keep it as professional as possible.
+
+<!-- prettier-ignore-start -->
+!!! warning
+    Opening issues in wrong repository will result in the issue being marked as invalid or will be moved to the corresponding repository.
+<!-- prettier-ignore-end -->
