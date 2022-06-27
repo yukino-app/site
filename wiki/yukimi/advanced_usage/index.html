@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://yukino-org.github.io/wiki/yukimi/advanced_usage/">
       
       <link rel="icon" href="../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -457,6 +457,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../updating/" class="md-nav__link">
+        Updating Yukimi
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -526,7 +540,26 @@
 
 <h1 id="advanced-usage">Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permanent link">&para;</a></h1>
 <h2 id="bulk-downloading">Bulk Downloading<a class="headerlink" href="#bulk-downloading" title="Permanent link">&para;</a></h2>
-<p>The <code>episodes</code> and <code>chapters</code> option supports multiple ranges. Supported formats are <code>all</code>, <code>x,y,z</code> (comma-seperated), <code>x..z</code>, <code>x...z</code> and <code>x-z</code>. Examples: <code>1,2,5</code>, <code>1-5</code>, <code>1..5</code>, <code>1...5</code>, <code>all</code>.</p>
+<p>The <code>episodes</code> and <code>chapters</code> option supports selection in bulk.</p>
+<p>Allowed Formats:</p>
+<ul>
+<li><code>x,y,z</code> - Multiple values which are comma-seperated.</li>
+<li><code>x..y</code> or <code>x...y</code> - From-to range.</li>
+<li><code>x+y</code>, <code>x-y</code> - Mathematical operation.</li>
+</ul>
+<p>Available Variables:</p>
+<ul>
+<li><code>first</code> - First episode number.</li>
+<li><code>last</code> - Last episode number.</li>
+</ul>
+<p>Valid Examples:</p>
+<ul>
+<li><code>1,2,3</code> - Selects episode 1, 2 and 3.</li>
+<li><code>1..3</code> or <code>1...3</code> - Selects 1, 2 and 3.</li>
+<li><code>first..last</code> or <code>first...last</code> - Selects all the episodes.</li>
+<li><code>first..first+2</code> - Selects first 2 episodes.</li>
+<li><code>last-2..last</code> - Selects last 2 episodes.</li>
+</ul>
 <h2 id="argument-variables">Argument Variables<a class="headerlink" href="#argument-variables" title="Permanent link">&para;</a></h2>
 <p>Options like <code>destination</code>, <code>filename</code> supports templates which will be replaced with actual values. For example, <code>${anime.name}</code> will be replaced with the actual anime name. List of all the available templates can be checked <a href="https://github.com/yukino-org/yukimi/blob/fcfe761e4ea09646a2ddb0fb88ec31432e0a8f29/src/core/commander.dart#L49">here</a>.</p>
 <h2 id="json-mode">JSON-mode<a class="headerlink" href="#json-mode" title="Permanent link">&para;</a></h2>
