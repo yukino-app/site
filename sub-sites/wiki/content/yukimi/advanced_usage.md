@@ -5,20 +5,23 @@
 The `episodes` and `chapters` option supports selection in bulk.
 
 Allowed Formats:
-- `x,y,z` - Multiple values which are comma-seperated.
-- `x..y` or `x...y` - From-to range.
-- `x+y`, `x-y` - Mathematical operation.
+
+-   `x,y,z` - Multiple values which are comma-seperated.
+-   `x..y` or `x...y` - From-to range.
+-   `x+y`, `x-y` - Mathematical operation.
 
 Available Variables:
-- `first` - First episode number.
-- `last` - Last episode number.
+
+-   `first` - First episode number.
+-   `last` - Last episode number.
 
 Valid Examples:
-- `1,2,3` - Selects episode 1, 2 and 3.
-- `1..3` or `1...3` - Selects 1, 2 and 3.
-- `first..last` or `first...last` - Selects all the episodes.
-- `first..first+2` - Selects first 2 episodes.
-- `last-2..last` - Selects last 2 episodes.
+
+-   `1,2,3` - Selects episode 1, 2 and 3.
+-   `1..3` or `1...3` - Selects 1, 2 and 3.
+-   `first..last` or `first...last` - Selects all the episodes.
+-   `first..first+2` - Selects first 2 episodes.
+-   `last-2..last` - Selects last 2 episodes.
 
 ## Argument Variables
 

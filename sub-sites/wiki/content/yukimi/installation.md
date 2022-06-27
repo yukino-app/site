@@ -2,6 +2,8 @@
 
 Pre-built binaries are released in the `dist-*` branches of the [repository](https://github.com/yukino-org/yukimi). Thus, you would require [git](https://git-scm.com/) to be installed.
 
+Before executing the below steps, open terminal in the folder where you want to install the application.
+
 ## Step 1: Cloning the repository
 
 Download the pre-built binaries by cloning the correct branch from the repository.
