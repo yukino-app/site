@@ -10,9 +10,9 @@ Download the pre-built binaries by cloning the correct branch from the repositor
 
 -   For Windows: `git clone https://github.com/yukino-org/yukimi.git -b dist-windows`
 
--   For Linux: `git clone https://github.com/yukino-org/yukimi.git -b dist-windows`
+-   For Linux: `git clone https://github.com/yukino-org/yukimi.git -b dist-linux`
 
--   For MacOS: `git clone https://github.com/yukino-org/yukimi.git -b dist-windows`
+-   For MacOS: `git clone https://github.com/yukino-org/yukimi.git -b dist-macos`
 
 ## Step 2: That's it
 
