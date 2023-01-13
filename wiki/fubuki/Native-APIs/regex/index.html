@@ -8,25 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://yukino-org.github.io/wiki/">
+        <link rel="canonical" href="https://yukino-org.github.io/wiki/fubuki/Native-APIs/regex/">
       
       
+        <link rel="prev" href="../object/">
       
-        <link rel="next" href="developers/contribution/">
       
-      <link rel="icon" href="assets/logo.png">
+        <link rel="next" href="../string/">
+      
+      <link rel="icon" href="../../../assets/logo.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.4">
     
     
       
-        <title>Wiki (Yukino Org)</title>
+        <title>RegExp - Wiki (Yukino Org)</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.9c788c91.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9c788c91.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -42,9 +44,9 @@
       
     
     
-      <link rel="stylesheet" href="assets/styles.css">
+      <link rel="stylesheet" href="../../../assets/styles.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#regexp" class="md-skip">
           Skip to content
         </a>
       
@@ -89,9 +91,9 @@
 
 <header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Wiki (Yukino Org)" class="md-header__button md-logo" aria-label="Wiki (Yukino Org)" data-md-component="logo">
+    <a href="../../.." title="Wiki (Yukino Org)" class="md-header__button md-logo" aria-label="Wiki (Yukino Org)" data-md-component="logo">
       
-  <img src="assets/logo.png" alt="logo">
+  <img src="../../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -107,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting Started
+              RegExp
             
           </span>
         </div>
@@ -181,12 +183,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="." class="md-tabs__link md-tabs__link--active">
+    <a href="../../.." class="md-tabs__link">
       Getting Started
     </a>
   </li>
@@ -201,7 +201,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="developers/contribution/" class="md-tabs__link">
+      <a href="../../../developers/contribution/" class="md-tabs__link">
         Developers
       </a>
     </li>
@@ -211,13 +211,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="fubuki/" class="md-tabs__link">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
         Fubuki
       </a>
     </li>
@@ -233,7 +235,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="tenka/disclaimer/" class="md-tabs__link">
+      <a href="../../../tenka/disclaimer/" class="md-tabs__link">
         Tenka
       </a>
     </li>
@@ -249,7 +251,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="yukimi/advanced_usage/" class="md-tabs__link">
+      <a href="../../../yukimi/advanced_usage/" class="md-tabs__link">
         Yukimi
       </a>
     </li>
@@ -283,9 +285,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Wiki (Yukino Org)" class="md-nav__button md-logo" aria-label="Wiki (Yukino Org)" data-md-component="logo">
+    <a href="../../.." title="Wiki (Yukino Org)" class="md-nav__button md-logo" aria-label="Wiki (Yukino Org)" data-md-component="logo">
       
-  <img src="assets/logo.png" alt="logo">
+  <img src="../../../assets/logo.png" alt="logo">
 
     </a>
     Wiki (Yukino Org)
@@ -299,59 +301,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Getting Started
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         Getting Started
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-do-i-use-this-wiki" class="md-nav__link">
-    How do I use this wiki?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -391,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="developers/contribution/" class="md-nav__link">
+      <a href="../../../developers/contribution/" class="md-nav__link">
         Contribution
       </a>
     </li>
@@ -411,18 +365,20 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
           Fubuki
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -440,7 +396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fubuki/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -454,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fubuki/data-types/" class="md-nav__link">
+      <a href="../../data-types/" class="md-nav__link">
         Data Types
       </a>
     </li>
@@ -468,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fubuki/examples/" class="md-nav__link">
+      <a href="../../examples/" class="md-nav__link">
         Examples
       </a>
     </li>
@@ -482,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fubuki/operators/" class="md-nav__link">
+      <a href="../../operators/" class="md-nav__link">
         Operators
       </a>
     </li>
@@ -496,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fubuki/statements/" class="md-nav__link">
+      <a href="../../statements/" class="md-nav__link">
         Statements
       </a>
     </li>
@@ -508,20 +464,22 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_3_6" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_3_6" tabindex="0" aria-expanded="true">
           Native APIs
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -539,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fubuki/Native-APIs/boolean/" class="md-nav__link">
+      <a href="../boolean/" class="md-nav__link">
         Boolean
       </a>
     </li>
@@ -553,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fubuki/Native-APIs/convert/" class="md-nav__link">
+      <a href="../convert/" class="md-nav__link">
         Convert
       </a>
     </li>
@@ -567,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fubuki/Native-APIs/datetime/" class="md-nav__link">
+      <a href="../datetime/" class="md-nav__link">
         DateTime
       </a>
     </li>
@@ -581,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fubuki/Native-APIs/exception/" class="md-nav__link">
+      <a href="../exception/" class="md-nav__link">
         Exception
       </a>
     </li>
@@ -595,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fubuki/Native-APIs/function/" class="md-nav__link">
+      <a href="../function/" class="md-nav__link">
         Function
       </a>
     </li>
@@ -609,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fubuki/Native-APIs/future/" class="md-nav__link">
+      <a href="../future/" class="md-nav__link">
         Future
       </a>
     </li>
@@ -623,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fubuki/Native-APIs/globals/" class="md-nav__link">
+      <a href="../globals/" class="md-nav__link">
         Globals
       </a>
     </li>
@@ -637,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fubuki/Native-APIs/list/" class="md-nav__link">
+      <a href="../list/" class="md-nav__link">
         List
       </a>
     </li>
@@ -651,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fubuki/Native-APIs/number/" class="md-nav__link">
+      <a href="../number/" class="md-nav__link">
         Number
       </a>
     </li>
@@ -665,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fubuki/Native-APIs/object/" class="md-nav__link">
+      <a href="../object/" class="md-nav__link">
         Object
       </a>
     </li>
@@ -677,11 +635,79 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="fubuki/Native-APIs/regex/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          RegExp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         RegExp
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objects" class="md-nav__link">
+    Objects
+  </a>
+  
+    <nav class="md-nav" aria-label="Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regexp_1" class="md-nav__link">
+    RegExp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regexpmatch" class="md-nav__link">
+    RegExpMatch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regexpfrom" class="md-nav__link">
+    RegExp.from
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -693,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fubuki/Native-APIs/string/" class="md-nav__link">
+      <a href="../string/" class="md-nav__link">
         String
       </a>
     </li>
@@ -749,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tenka/disclaimer/" class="md-nav__link">
+      <a href="../../../tenka/disclaimer/" class="md-nav__link">
         Disclaimer
       </a>
     </li>
@@ -763,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tenka/store/" class="md-nav__link">
+      <a href="../../../tenka/store/" class="md-nav__link">
         Store
       </a>
     </li>
@@ -812,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="yukimi/advanced_usage/" class="md-nav__link">
+      <a href="../../../yukimi/advanced_usage/" class="md-nav__link">
         Advanced Usage
       </a>
     </li>
@@ -826,7 +852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="yukimi/basic_usage/" class="md-nav__link">
+      <a href="../../../yukimi/basic_usage/" class="md-nav__link">
         Basic Usage
       </a>
     </li>
@@ -840,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="yukimi/installation/" class="md-nav__link">
+      <a href="../../../yukimi/installation/" class="md-nav__link">
         Installing Yukimi
       </a>
     </li>
@@ -881,15 +907,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-do-i-use-this-wiki" class="md-nav__link">
-    How do I use this wiki?
+  <a href="#objects" class="md-nav__link">
+    Objects
   </a>
+  
+    <nav class="md-nav" aria-label="Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regexp_1" class="md-nav__link">
+    RegExp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regexpmatch" class="md-nav__link">
+    RegExpMatch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
+  <a href="#regexpfrom" class="md-nav__link">
+    RegExp.from
   </a>
   
 </li>
@@ -910,15 +956,132 @@
 
 
 
-<h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
-<h2 id="how-do-i-use-this-wiki">How do I use this wiki?<a class="headerlink" href="#how-do-i-use-this-wiki" title="Permanent link">&para;</a></h2>
-<p>All the categories are visible on the top navbar. All the topics are visible on the left sidebar (in the left drawer on mobile). All the page content headings are visible on the right sidebar (in the left drawer on mobile).</p>
-<p>You can use the search bar to navigate around easily. Feel free to ask on our Discord server if it's nowhere to be found.</p>
-<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://yukino-org.github.io/discord">Discord</a></li>
-<li><a href="https://github.com/yukino-org">GitHub</a></li>
-</ul>
+<h1 id="regexp">RegExp<a class="headerlink" href="#regexp" title="Permanent link">&para;</a></h1>
+<h2 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">&para;</a></h2>
+<h3 id="regexp_1">RegExp<a class="headerlink" href="#regexp_1" title="Permanent link">&para;</a></h3>
+<p>The regular expression.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Signature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>isCaseInsensitive</code></td>
+<td><code>Boolean</code></td>
+<td>Is case insensitive flag enabled?</td>
+</tr>
+<tr>
+<td><code>isDotAll</code></td>
+<td><code>Boolean</code></td>
+<td>Is dot-all flag enabled?</td>
+</tr>
+<tr>
+<td><code>isMultiline</code></td>
+<td><code>Boolean</code></td>
+<td>Is multiline flag enabled?</td>
+</tr>
+<tr>
+<td><code>isUnicode</code></td>
+<td><code>Boolean</code></td>
+<td>Is unicode flag enabled?</td>
+</tr>
+<tr>
+<td><code>pattern</code></td>
+<td><code>String</code></td>
+<td>Regular expression pattern.</td>
+</tr>
+<tr>
+<td><code>hasMatch</code></td>
+<td><code>(input: String) =&gt; Boolean</code></td>
+<td>Does <code>input</code> has matches against the pattern.</td>
+</tr>
+<tr>
+<td><code>stringMatch</code></td>
+<td><code>(input: String) =&gt; String</code></td>
+<td>Returns the string match of <code>input</code> against the pattern.</td>
+</tr>
+<tr>
+<td><code>firstMatch</code></td>
+<td><code>(input: String) =&gt; RegExpMatch?</code></td>
+<td>Returns the match of <code>input</code> against the pattern.</td>
+</tr>
+<tr>
+<td><code>allMatches</code></td>
+<td><code>(input: String) =&gt; List&lt;RegExpMatch&gt;</code></td>
+<td>Returns the all the matches of <code>input</code> against the pattern.</td>
+</tr>
+<tr>
+<td><code>replaceFirst</code></td>
+<td><code>(input: String, with: String) =&gt; String</code></td>
+<td>Returns a string after replacing first match of <code>input</code> against the pattern using <code>with</code>.</td>
+</tr>
+<tr>
+<td><code>replaceAll</code></td>
+<td><code>(input: String, with: String) =&gt; String</code></td>
+<td>Returns a string after replacing all the matches of <code>input</code> against the pattern using <code>with</code>.</td>
+</tr>
+<tr>
+<td><code>replaceFirstMapped</code></td>
+<td><code>(input: String, with: (RegExpMatch) =&gt; String) =&gt; String</code></td>
+<td>Returns a string after replacing first match of <code>input</code> against the pattern using the value returned by <code>with</code>.</td>
+</tr>
+<tr>
+<td><code>replaceAllMapped</code></td>
+<td><code>(input: String, with: (RegExpMatch) =&gt; String) =&gt; String</code></td>
+<td>Returns a string after replacing all the matches of <code>input</code> against the pattern using the value returned by <code>with</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="regexpmatch">RegExpMatch<a class="headerlink" href="#regexpmatch" title="Permanent link">&para;</a></h3>
+<p>Contains information about a regular expression match.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Signature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input</code></td>
+<td><code>String</code></td>
+<td>The input.</td>
+</tr>
+<tr>
+<td><code>groupCount</code></td>
+<td><code>Number</code></td>
+<td>The number of groups.</td>
+</tr>
+<tr>
+<td><code>groupNames</code></td>
+<td><code>List&lt;String&gt;</code></td>
+<td>The names of the groups.</td>
+</tr>
+<tr>
+<td><code>namedGroup</code></td>
+<td><code>(groupName: String) =&gt; RegExpMatch?</code></td>
+<td>Returns the match using the <code>groupName</code>.</td>
+</tr>
+<tr>
+<td><code>group</code></td>
+<td><code>(index: Number) =&gt; RegExpMatch?</code></td>
+<td>Returns the match at the <code>index</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="regexpfrom"><code>RegExp.from</code><a class="headerlink" href="#regexpfrom" title="Permanent link">&para;</a></h2>
+<p>Takes in a value and returns the boolean equivalent.</p>
+<div class="highlight"><pre><span></span><code>RegExp.from(r&quot;\w+&quot;);
+# regexp of pattern \w+
+
+RegExp.from(&quot;\\d+&quot;);
+# regexp of pattern \d+
+</code></pre></div>
 
 
 
@@ -987,10 +1150,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky"], "search": "assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.ba449ae6.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.ba449ae6.min.js"></script>
       
     
   </body>
