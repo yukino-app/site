@@ -21,6 +21,8 @@ theme:
     features:
         - navigation.top
         - navigation.sections
+        - navigation.tabs
+        - navigation.tabs.sticky
 
 extra_css:
     - assets/styles.css
