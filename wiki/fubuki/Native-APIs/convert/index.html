@@ -1107,7 +1107,7 @@
 <div class="highlight"><pre><span></span><code>bytes := Convert.newBytesList();
 # internally, []
 
-bytes = Convert.newBytesList(list [0, 1, 2]);
+bytes = Convert.newBytesList([0, 1, 2]);
 # internally, [0, 1, 2]
 
 bytes.bytes();
@@ -1120,13 +1120,13 @@ bytes.bytes();
 </code></pre></div>
 <h2 id="convertdecodeascii"><code>Convert.decodeAscii</code><a class="headerlink" href="#convertdecodeascii" title="Permanent link">&para;</a></h2>
 <p>Takes in a <code>BytesList</code> and returns a string.</p>
-<div class="highlight"><pre><span></span><code>bytes := Convert.newBytesList(list [72, 101, 108, 108, 111]);
+<div class="highlight"><pre><span></span><code>bytes := Convert.newBytesList([72, 101, 108, 108, 111]);
 Convert.decodeAscii(bytes);
 # Hello
 </code></pre></div>
 <h2 id="convertencodebase64"><code>Convert.encodeBase64</code><a class="headerlink" href="#convertencodebase64" title="Permanent link">&para;</a></h2>
 <p>Takes in a <code>BytesList</code> and returns a base64 string.</p>
-<div class="highlight"><pre><span></span><code>bytes := Convert.newBytesList(list [72, 101, 108, 108, 111]);
+<div class="highlight"><pre><span></span><code>bytes := Convert.newBytesList([72, 101, 108, 108, 111]);
 Convert.encodeBase64(bytes);
 # SGVsbG8=
 </code></pre></div>
@@ -1142,7 +1142,7 @@ Convert.encodeBase64(bytes);
 </code></pre></div>
 <h2 id="convertdecodelatin1"><code>Convert.decodeLatin1</code><a class="headerlink" href="#convertdecodelatin1" title="Permanent link">&para;</a></h2>
 <p>Takes in a <code>BytesList</code> and returns a string.</p>
-<div class="highlight"><pre><span></span><code>bytes := Convert.newBytesList(list [72, 101, 108, 108, 111]);
+<div class="highlight"><pre><span></span><code>bytes := Convert.newBytesList([72, 101, 108, 108, 111]);
 Convert.decodeLatin1(bytes);
 # Hello
 </code></pre></div>
@@ -1153,13 +1153,13 @@ Convert.decodeLatin1(bytes);
 </code></pre></div>
 <h2 id="convertdecodeutf8"><code>Convert.decodeUtf8</code><a class="headerlink" href="#convertdecodeutf8" title="Permanent link">&para;</a></h2>
 <p>Takes in a <code>BytesList</code> and returns a string.</p>
-<div class="highlight"><pre><span></span><code>bytes := Convert.newBytesList(list [72, 101, 108, 108, 111]);
+<div class="highlight"><pre><span></span><code>bytes := Convert.newBytesList([72, 101, 108, 108, 111]);
 Convert.decodeUtf8(bytes);
 # Hello
 </code></pre></div>
 <h2 id="convertencodejson"><code>Convert.encodeJson</code><a class="headerlink" href="#convertencodejson" title="Permanent link">&para;</a></h2>
 <p>Takes in a value and returns json string.</p>
-<div class="highlight"><pre><span></span><code>json := obj {
+<div class="highlight"><pre><span></span><code>json := {
     hello: &quot;world&quot;,
 };
 Convert.encodeJson(json);
@@ -1169,7 +1169,7 @@ Convert.encodeJson(json);
 <p>Takes in a json string and returns a value.</p>
 <div class="highlight"><pre><span></span><code>json := &#39;{&quot;hello&quot;:&quot;world&quot;}&#39;;
 Convert.decodeJson(json);
-# obj { hello: &quot;world&quot; }
+# { hello: &quot;world&quot; }
 </code></pre></div>
 
 

@@ -933,16 +933,12 @@
 <div class="highlight"><pre><span></span><code>print &quot;Hello World!&quot;;
 </code></pre></div>
 <h2 id="area-of-shapes">Area of shapes<a class="headerlink" href="#area-of-shapes" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>square := obj {
-    area: fun (side) {
-        return side * side;
-    },
+<div class="highlight"><pre><span></span><code>square := {
+    area: -&gt; side : side * side,
 };
 
-rectangle := obj {
-    area: fun (length, breadth) {
-        return length * breadth;
-    },
+rectangle := {
+    area: -&gt; length, breadth : length * breadth,
 };
 
 print &quot;Area of square: &quot; + square.area(5);
@@ -950,7 +946,7 @@ print &quot;Area of rectangle: &quot; + rectangle.area(2, 3);
 </code></pre></div>
 <h2 id="print-until-100-and-as-a-list">Print until 100 and as a list<a class="headerlink" href="#print-until-100-and-as-a-list" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>i := 0;
-numbers := list [];
+numbers := [];
 while (i &lt;= 100) {
     print i;
     numbers.add(i);

@@ -1032,7 +1032,7 @@
 <p>Returns a new <code>Completer</code>.</p>
 <div class="highlight"><pre><span></span><code>completer := Future.new();
 future := completer.future;
-future.then(fun (x) {
+future.then(-&gt; x {
     print x;
     # 1
 });
@@ -1051,11 +1051,11 @@ print future.await();
 </code></pre></div>
 <h2 id="futureawaitall"><code>Future.awaitAll</code><a class="headerlink" href="#futureawaitall" title="Permanent link">&para;</a></h2>
 <p>Takes in a list of futures and returns the list of resolved values.</p>
-<div class="highlight"><pre><span></span><code>Future.awaitAll(list [futureValue1, futureValue2, ..., futureValueN]);
+<div class="highlight"><pre><span></span><code>Future.awaitAll([futureValue1, futureValue2, ..., futureValueN]);
 </code></pre></div>
 <h2 id="futureany"><code>Future.any</code><a class="headerlink" href="#futureany" title="Permanent link">&para;</a></h2>
 <p>Takes in a list of futures and returns the value of any one future.</p>
-<div class="highlight"><pre><span></span><code>Future.any(list [futureValue1, futureValue2, ..., futureValueN]);
+<div class="highlight"><pre><span></span><code>Future.any([futureValue1, futureValue2, ..., futureValueN]);
 </code></pre></div>
 
 

@@ -1003,24 +1003,24 @@
 <h1 id="object">Object<a class="headerlink" href="#object" title="Permanent link">&para;</a></h1>
 <h2 id="objectfrom"><code>Object.from</code><a class="headerlink" href="#objectfrom" title="Permanent link">&para;</a></h2>
 <p>Takes in an object and returns the clone of it.</p>
-<div class="highlight"><pre><span></span><code>Object.from(obj {});
+<div class="highlight"><pre><span></span><code>Object.from({});
 # {}
 
-Object.from(obj { hello: &quot;world&quot; });
+Object.from({ hello: &quot;world&quot; });
 # { hello: &quot;world&quot; }
 </code></pre></div>
 <h2 id="objectfromentries"><code>Object.fromEntries</code><a class="headerlink" href="#objectfromentries" title="Permanent link">&para;</a></h2>
 <p>Takes in an list of entries and returns an object.</p>
-<div class="highlight"><pre><span></span><code>Object.fromEntries(list []);
+<div class="highlight"><pre><span></span><code>Object.fromEntries([]);
 # {}
 
-Object.fromEntries(list [list [&quot;hello&quot;, &quot;world&quot;]]);
+Object.fromEntries([[&quot;hello&quot;, &quot;world&quot;]]);
 # { hello: &quot;world&quot; }
 </code></pre></div>
 <h2 id="objectapply"><code>Object.apply</code><a class="headerlink" href="#objectapply" title="Permanent link">&para;</a></h2>
 <p>Takes in two objects and returns object A after applying properties of object B to object A.</p>
-<div class="highlight"><pre><span></span><code>a := obj {};
-b := obj {
+<div class="highlight"><pre><span></span><code>a := {};
+b := {
     hello: &quot;world&quot;,
 };
 
@@ -1031,27 +1031,27 @@ print a;
 </code></pre></div>
 <h2 id="objectentries"><code>Object.entries</code><a class="headerlink" href="#objectentries" title="Permanent link">&para;</a></h2>
 <p>Takes in an object and returns a list of key-value pairs in a list.</p>
-<div class="highlight"><pre><span></span><code>Object.entries(obj { hello: &quot;world&quot;, foo: &quot;bar&quot; });
+<div class="highlight"><pre><span></span><code>Object.entries({ hello: &quot;world&quot;, foo: &quot;bar&quot; });
 # [[&quot;hello&quot;, &quot;world&quot;], [&quot;foo&quot;, &quot;bar&quot;]]
 </code></pre></div>
 <h2 id="objectkeys"><code>Object.keys</code><a class="headerlink" href="#objectkeys" title="Permanent link">&para;</a></h2>
 <p>Takes in an object and returns a list of keys.</p>
-<div class="highlight"><pre><span></span><code>Object.keys(obj { hello: &quot;world&quot;, foo: &quot;bar&quot; });
+<div class="highlight"><pre><span></span><code>Object.keys({ hello: &quot;world&quot;, foo: &quot;bar&quot; });
 # [&quot;hello&quot;, &quot;foo&quot;]
 </code></pre></div>
 <h2 id="objectvalues"><code>Object.values</code><a class="headerlink" href="#objectvalues" title="Permanent link">&para;</a></h2>
 <p>Takes in an object and returns a list of values.</p>
-<div class="highlight"><pre><span></span><code>Object.values(obj { hello: &quot;world&quot;, foo: &quot;bar&quot; });
+<div class="highlight"><pre><span></span><code>Object.values({ hello: &quot;world&quot;, foo: &quot;bar&quot; });
 # [&quot;world&quot;, &quot;bar&quot;]
 </code></pre></div>
 <h2 id="objectclone"><code>Object.clone</code><a class="headerlink" href="#objectclone" title="Permanent link">&para;</a></h2>
 <p>Takes in an object and returns a clone of it.</p>
-<div class="highlight"><pre><span></span><code>Object.clone(obj { hello: &quot;world&quot; });
+<div class="highlight"><pre><span></span><code>Object.clone({ hello: &quot;world&quot; });
 # { hello: &quot;world&quot; }
 </code></pre></div>
 <h2 id="objectdeleteproperty"><code>Object.deleteProperty</code><a class="headerlink" href="#objectdeleteproperty" title="Permanent link">&para;</a></h2>
 <p>Takes in an object, a key and removes the key from the object.</p>
-<div class="highlight"><pre><span></span><code>value := obj { hello: &quot;world&quot;, foo: &quot;bar&quot; };
+<div class="highlight"><pre><span></span><code>value := { hello: &quot;world&quot;, foo: &quot;bar&quot; };
 Object.deleteProperty(value, &quot;hello&quot;);
 print value;
 # { foo: &quot;bar&quot; }

@@ -486,13 +486,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#map" class="md-nav__link">
-    Map
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#list" class="md-nav__link">
     List
   </a>
@@ -976,13 +969,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#map" class="md-nav__link">
-    Map
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#list" class="md-nav__link">
     List
   </a>
@@ -1245,59 +1231,45 @@ false
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Trailing commas are allowed in function parameters, function call, object key-value pairs, map key-value pairs and list values. For example, <code>list [1, 2, 3,]</code> is perfectly valid and same as <code>list [1, 2, 3]</code>.</p>
+<p>Trailing commas are allowed in function parameters, function call, object key-value pairs and list values. For example, <code>[1, 2, 3,]</code> is perfectly valid and same as <code>[1, 2, 3]</code>.</p>
 </div>
 <h2 id="function">Function<a class="headerlink" href="#function" title="Permanent link">&para;</a></h2>
-<p>Represents a callable object. Functions are prefixed with <code>fun</code> keyword. They are anonymous and cannot have a named unlike other programming languages. They are invoked using call operator. They can take in parameters and may return values.</p>
-<div class="highlight"><span class="filename">Syntax</span><pre><span></span><code>fun [([param1, param2, ..., paramN])] {
+<p>Represents a callable object. Functions are prefixed with right arrow operator (<code>-&gt;</code>). They are anonymous and cannot have a named unlike other programming languages. They are invoked using call operator. They can take in parameters and may return values.</p>
+<div class="highlight"><span class="filename">Syntax</span><pre><span></span><code>-&gt; [param1, param2, ..., paramN] {
     statements
 }
-</code></pre></div>
-<div class="highlight"><span class="filename">Example</span><pre><span></span><code>fun { return 1; }
-fun () { return 1; }
 
-fun (a, b) {
-    return a + b;
-}
+-&gt; [param1, param2, ..., paramN] : expr
+</code></pre></div>
+<div class="highlight"><span class="filename">Example</span><pre><span></span><code>-&gt; { return 1; }
+-&gt; a, b { return a + b; }
+
+-&gt; a, b : a + b
+-&gt; x : x
 </code></pre></div>
 <h2 id="object">Object<a class="headerlink" href="#object" title="Permanent link">&para;</a></h2>
-<p>Represents a pair of keys and values. Objects are prefixed with <code>obj</code> keyword. Objects are not created from classes since classes do not even exist. The keys are parsed as identifiers and values are parsed as expressions. Any keys using surrounding brackets (<code>[]</code>) are parsed as expressions. They properties can be accessed using the get and set operators.</p>
-<div class="highlight"><span class="filename">Syntax</span><pre><span></span><code>obj {
+<p>Represents a pair of keys and values. Objects are not created from classes since classes do not even exist. The keys are parsed as identifiers and values are parsed as expressions. Any keys using surrounding brackets (<code>[]</code>) are parsed as expressions. They properties can be accessed using the get and set operators.</p>
+<div class="highlight"><span class="filename">Syntax</span><pre><span></span><code>{
     [property: expr,]
     ...
     [\[expr\]: expr,]
     ...
 }
 </code></pre></div>
-<div class="highlight"><span class="filename">Example</span><pre><span></span><code>obj {}
+<div class="highlight"><span class="filename">Example</span><pre><span></span><code>{}
 
-obj {
+{
     hello1: &quot;world1&quot;,
     [&quot;hello2&quot;]: &quot;world2&quot;,
     [1]: &quot;world3&quot;,
 }
 </code></pre></div>
-<h2 id="map">Map<a class="headerlink" href="#map" title="Permanent link">&para;</a></h2>
-<p>Represents a pair of keys and values. Maps are prefixed with <code>map</code> keyword. Maps differ only syntactically from objects. Keys are parsed as expressions and not as identifiers.</p>
-<div class="highlight"><span class="filename">Syntax</span><pre><span></span><code>map {
-    [expr: expr,]
-    ...
-}
-</code></pre></div>
-<div class="highlight"><span class="filename">Example</span><pre><span></span><code>map {}
-
-map {
-    &quot;hello1&quot;: &quot;world1&quot;,
-    &quot;hello2&quot;: &quot;world2&quot;,
-    1: &quot;world3&quot;,
-}
-</code></pre></div>
 <h2 id="list">List<a class="headerlink" href="#list" title="Permanent link">&para;</a></h2>
-<p>Represents a list of values. Lists are prefixed with <code>list</code> keyword.</p>
-<div class="highlight"><span class="filename">Syntax</span><pre><span></span><code>list \[[expr1, expr2, ..., exprN]\]
+<p>Represents a list of values.</p>
+<div class="highlight"><span class="filename">Syntax</span><pre><span></span><code>\[[expr1, expr2, ..., exprN]\]
 </code></pre></div>
-<div class="highlight"><span class="filename">Example</span><pre><span></span><code>list []
-list [1, 2, 3]
+<div class="highlight"><span class="filename">Example</span><pre><span></span><code>[]
+[1, 2, 3]
 </code></pre></div>
 <table>
 <thead>
@@ -1433,8 +1405,8 @@ list [1, 2, 3]
 <h2 id="future">Future<a class="headerlink" href="#future" title="Permanent link">&para;</a></h2>
 <p>Represents a asynchronous value. Internally represented using Dart's <code>Future</code>. Futures are not directly creatable.</p>
 <div class="highlight"><span class="filename">Example</span><pre><span></span><code>someFutureValue.await();
-someFutureValue.then(fun (x) { print x; });
-someFutureValue.catchError(fun (err) { print err; });
+someFutureValue.then(-&gt; x { print x; });
+someFutureValue.catchError(-&gt; err { print err; });
 </code></pre></div>
 <table>
 <thead>

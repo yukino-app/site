@@ -933,15 +933,15 @@
 <h1 id="list">List<a class="headerlink" href="#list" title="Permanent link">&para;</a></h1>
 <h2 id="listfrom"><code>List.from</code><a class="headerlink" href="#listfrom" title="Permanent link">&para;</a></h2>
 <p>Takes in a value and returns a list. If the value is a list, the list is cloned. If the value is a map, the entries are returned. An exception is thrown if it is neither of these.</p>
-<div class="highlight"><pre><span></span><code>List.from(list [0, 1, 2]);
+<div class="highlight"><pre><span></span><code>List.from([0, 1, 2]);
 # [0, 1, 2]
 
-List.from(obj { hello: &quot;world&quot; });
+List.from({ hello: &quot;world&quot; });
 # [[&quot;hello&quot;, &quot;world&quot;]]
 </code></pre></div>
 <h2 id="listgenerate"><code>List.generate</code><a class="headerlink" href="#listgenerate" title="Permanent link">&para;</a></h2>
 <p>Takes in a length, a predicate that returns a value and returns the generated list.</p>
-<div class="highlight"><pre><span></span><code>List.from(3, fun (i) { return i + 1; });
+<div class="highlight"><pre><span></span><code>List.from(3, -&gt; i : i + 1);
 # [1, 2, 3]
 </code></pre></div>
 <h2 id="listfilled"><code>List.filled</code><a class="headerlink" href="#listfilled" title="Permanent link">&para;</a></h2>
