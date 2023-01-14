@@ -41,7 +41,7 @@ match
 
 ## Identifiers
 
-Identifiers are made up of alphabets (`A-Z`, `a-z`) and underscore (`_`). Numbers (`0-9`) can also be used but are not allowed at the start of an identifier.
+Identifiers are made up of alphabets (`A-Z`, `a-z`) and underscore (`_`). Numbers (`0-9`) can also be used but are not allowed at the start of an identifier. Keywords cannot be used as identifiers.
 
 Fubuki does not have a standard naming convention but camel-case is preferred.
 

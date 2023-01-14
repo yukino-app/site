@@ -56,6 +56,6 @@ Takes in a value and returns a number or `null`.
 Number.from("10");
 # 10
 
-Number.from(list []);
+Number.from([]);
 # null
 ```

@@ -18,7 +18,7 @@ Takes in an optional byte list and returns a `BytesList`.
 bytes := Convert.newBytesList();
 # internally, []
 
-bytes = Convert.newBytesList(list [0, 1, 2]);
+bytes = Convert.newBytesList([0, 1, 2]);
 # internally, [0, 1, 2]
 
 bytes.bytes();
@@ -39,7 +39,7 @@ Convert.encodeAscii("Hello");
 Takes in a `BytesList` and returns a string.
 
 ```
-bytes := Convert.newBytesList(list [72, 101, 108, 108, 111]);
+bytes := Convert.newBytesList([72, 101, 108, 108, 111]);
 Convert.decodeAscii(bytes);
 # Hello
 ```
@@ -49,7 +49,7 @@ Convert.decodeAscii(bytes);
 Takes in a `BytesList` and returns a base64 string.
 
 ```
-bytes := Convert.newBytesList(list [72, 101, 108, 108, 111]);
+bytes := Convert.newBytesList([72, 101, 108, 108, 111]);
 Convert.encodeBase64(bytes);
 # SGVsbG8=
 ```
@@ -77,7 +77,7 @@ Convert.encodeLatin1("Hello");
 Takes in a `BytesList` and returns a string.
 
 ```
-bytes := Convert.newBytesList(list [72, 101, 108, 108, 111]);
+bytes := Convert.newBytesList([72, 101, 108, 108, 111]);
 Convert.decodeLatin1(bytes);
 # Hello
 ```
@@ -96,7 +96,7 @@ Convert.encodeUtf8("Hello");
 Takes in a `BytesList` and returns a string.
 
 ```
-bytes := Convert.newBytesList(list [72, 101, 108, 108, 111]);
+bytes := Convert.newBytesList([72, 101, 108, 108, 111]);
 Convert.decodeUtf8(bytes);
 # Hello
 ```
@@ -106,7 +106,7 @@ Convert.decodeUtf8(bytes);
 Takes in a value and returns json string.
 
 ```
-json := obj {
+json := {
     hello: "world",
 };
 Convert.encodeJson(json);
@@ -120,5 +120,5 @@ Takes in a json string and returns a value.
 ```
 json := '{"hello":"world"}';
 Convert.decodeJson(json);
-# obj { hello: "world" }
+# { hello: "world" }
 ```

@@ -11,7 +11,7 @@ String.from(false);
 String.from(1);
 # "1"
 
-String.from(list [1, 2, 3]);
+String.from([1, 2, 3]);
 # "[1, 2, 3]"
 ```
 
@@ -29,6 +29,6 @@ String.fromCodeUnit(72);
 Takes in a byte and returns the equivalent character value as string.
 
 ```
-String.fromCodeUnit(list [72, 101, 108, 108, 111]);
+String.fromCodeUnit([72, 101, 108, 108, 111]);
 # Hello
 ```

@@ -105,33 +105,34 @@ false
 
 !!! info
 
-    Trailing commas are allowed in function parameters, function call, object key-value pairs, map key-value pairs and list values. For example, `list [1, 2, 3,]` is perfectly valid and same as `list [1, 2, 3]`.
+    Trailing commas are allowed in function parameters, function call, object key-value pairs and list values. For example, `[1, 2, 3,]` is perfectly valid and same as `[1, 2, 3]`.
 
 ## Function
 
-Represents a callable object. Functions are prefixed with `fun` keyword. They are anonymous and cannot have a named unlike other programming languages. They are invoked using call operator. They can take in parameters and may return values.
+Represents a callable object. Functions are prefixed with right arrow operator (`->`). They are anonymous and cannot have a named unlike other programming languages. They are invoked using call operator. They can take in parameters and may return values.
 
 ```title="Syntax"
-fun [([param1, param2, ..., paramN])] {
+-> [param1, param2, ..., paramN] {
     statements
 }
+
+-> [param1, param2, ..., paramN] : expr
 ```
 
 ```title="Example"
-fun { return 1; }
-fun () { return 1; }
+-> { return 1; }
+-> a, b { return a + b; }
 
-fun (a, b) {
-    return a + b;
-}
+-> a, b : a + b
+-> x : x
 ```
 
 ## Object
 
-Represents a pair of keys and values. Objects are prefixed with `obj` keyword. Objects are not created from classes since classes do not even exist. The keys are parsed as identifiers and values are parsed as expressions. Any keys using surrounding brackets (`[]`) are parsed as expressions. They properties can be accessed using the get and set operators.
+Represents a pair of keys and values. Objects are not created from classes since classes do not even exist. The keys are parsed as identifiers and values are parsed as expressions. Any keys using surrounding brackets (`[]`) are parsed as expressions. They properties can be accessed using the get and set operators.
 
 ```title="Syntax"
-obj {
+{
     [property: expr,]
     ...
     [\[expr\]: expr,]
@@ -140,47 +141,26 @@ obj {
 ```
 
 ```title="Example"
-obj {}
+{}
 
-obj {
+{
     hello1: "world1",
     ["hello2"]: "world2",
     [1]: "world3",
 }
 ```
 
-## Map
-
-Represents a pair of keys and values. Maps are prefixed with `map` keyword. Maps differ only syntactically from objects. Keys are parsed as expressions and not as identifiers.
-
-```title="Syntax"
-map {
-    [expr: expr,]
-    ...
-}
-```
-
-```title="Example"
-map {}
-
-map {
-    "hello1": "world1",
-    "hello2": "world2",
-    1: "world3",
-}
-```
-
 ## List
 
-Represents a list of values. Lists are prefixed with `list` keyword.
+Represents a list of values.
 
 ```title="Syntax"
-list \[[expr1, expr2, ..., exprN]\]
+\[[expr1, expr2, ..., exprN]\]
 ```
 
 ```title="Example"
-list []
-list [1, 2, 3]
+[]
+[1, 2, 3]
 ```
 
 | Property        | Signature                                             | Description                                                       |
@@ -216,8 +196,8 @@ Represents a asynchronous value. Internally represented using Dart's `Future`. F
 
 ```title="Example"
 someFutureValue.await();
-someFutureValue.then(fun (x) { print x; });
-someFutureValue.catchError(fun (err) { print err; });
+someFutureValue.then(-> x { print x; });
+someFutureValue.catchError(-> err { print err; });
 ```
 
 | Property     | Signature                       | Description                                    |

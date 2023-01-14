@@ -19,7 +19,7 @@ Returns a new `Completer`.
 ```
 completer := Future.new();
 future := completer.future;
-future.then(fun (x) {
+future.then(-> x {
     print x;
     # 1
 });
@@ -50,7 +50,7 @@ Future.wait(1000);
 Takes in a list of futures and returns the list of resolved values.
 
 ```
-Future.awaitAll(list [futureValue1, futureValue2, ..., futureValueN]);
+Future.awaitAll([futureValue1, futureValue2, ..., futureValueN]);
 ```
 
 ## `Future.any`
@@ -58,5 +58,5 @@ Future.awaitAll(list [futureValue1, futureValue2, ..., futureValueN]);
 Takes in a list of futures and returns the value of any one future.
 
 ```
-Future.any(list [futureValue1, futureValue2, ..., futureValueN]);
+Future.any([futureValue1, futureValue2, ..., futureValueN]);
 ```

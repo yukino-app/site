@@ -5,10 +5,10 @@
 Takes in an object and returns the clone of it.
 
 ```
-Object.from(obj {});
+Object.from({});
 # {}
 
-Object.from(obj { hello: "world" });
+Object.from({ hello: "world" });
 # { hello: "world" }
 ```
 
@@ -17,10 +17,10 @@ Object.from(obj { hello: "world" });
 Takes in an list of entries and returns an object.
 
 ```
-Object.fromEntries(list []);
+Object.fromEntries([]);
 # {}
 
-Object.fromEntries(list [list ["hello", "world"]]);
+Object.fromEntries([["hello", "world"]]);
 # { hello: "world" }
 ```
 
@@ -29,8 +29,8 @@ Object.fromEntries(list [list ["hello", "world"]]);
 Takes in two objects and returns object A after applying properties of object B to object A.
 
 ```
-a := obj {};
-b := obj {
+a := {};
+b := {
     hello: "world",
 };
 
@@ -45,7 +45,7 @@ print a;
 Takes in an object and returns a list of key-value pairs in a list.
 
 ```
-Object.entries(obj { hello: "world", foo: "bar" });
+Object.entries({ hello: "world", foo: "bar" });
 # [["hello", "world"], ["foo", "bar"]]
 ```
 
@@ -54,7 +54,7 @@ Object.entries(obj { hello: "world", foo: "bar" });
 Takes in an object and returns a list of keys.
 
 ```
-Object.keys(obj { hello: "world", foo: "bar" });
+Object.keys({ hello: "world", foo: "bar" });
 # ["hello", "foo"]
 ```
 
@@ -63,7 +63,7 @@ Object.keys(obj { hello: "world", foo: "bar" });
 Takes in an object and returns a list of values.
 
 ```
-Object.values(obj { hello: "world", foo: "bar" });
+Object.values({ hello: "world", foo: "bar" });
 # ["world", "bar"]
 ```
 
@@ -72,7 +72,7 @@ Object.values(obj { hello: "world", foo: "bar" });
 Takes in an object and returns a clone of it.
 
 ```
-Object.clone(obj { hello: "world" });
+Object.clone({ hello: "world" });
 # { hello: "world" }
 ```
 
@@ -81,7 +81,7 @@ Object.clone(obj { hello: "world" });
 Takes in an object, a key and removes the key from the object.
 
 ```
-value := obj { hello: "world", foo: "bar" };
+value := { hello: "world", foo: "bar" };
 Object.deleteProperty(value, "hello");
 print value;
 # { foo: "bar" }

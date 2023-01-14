@@ -9,16 +9,12 @@ print "Hello World!";
 ## Area of shapes
 
 ```
-square := obj {
-    area: fun (side) {
-        return side * side;
-    },
+square := {
+    area: -> side : side * side,
 };
 
-rectangle := obj {
-    area: fun (length, breadth) {
-        return length * breadth;
-    },
+rectangle := {
+    area: -> length, breadth : length * breadth,
 };
 
 print "Area of square: " + square.area(5);
@@ -29,7 +25,7 @@ print "Area of rectangle: " + rectangle.area(2, 3);
 
 ```
 i := 0;
-numbers := list [];
+numbers := [];
 while (i <= 100) {
     print i;
     numbers.add(i);
