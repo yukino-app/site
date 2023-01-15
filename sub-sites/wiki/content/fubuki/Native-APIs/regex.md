@@ -34,14 +34,14 @@ Contains information about a regular expression match.
 | `namedGroup` | `(groupName: String) => RegExpMatch?` | Returns the match using the `groupName`. |
 | `group`      | `(index: Number) => RegExpMatch?`     | Returns the match at the `index`.        |
 
-## `RegExp.from`
+## `RegExp.new`
 
 Takes in a value and returns the boolean equivalent.
 
 ```
-RegExp.from(r"\w+");
+RegExp.new(r"\w+");
 # regexp of pattern \w+
 
-RegExp.from("\\d+");
+RegExp.new("\\d+");
 # regexp of pattern \d+
 ```

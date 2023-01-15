@@ -41,7 +41,7 @@ match
 
 ## Identifiers
 
-Identifiers are made up of alphabets (`A-Z`, `a-z`) and underscore (`_`). Numbers (`0-9`) can also be used but are not allowed at the start of an identifier. Keywords cannot be used as identifiers.
+Identifiers are made up of alphabets (`A-Z`, `a-z`), dollar sign (`$`) and underscore (`_`). Numbers (`0-9`) can also be used but are not allowed at the start of an identifier. Keywords cannot be used as identifiers.
 
 Fubuki does not have a standard naming convention but camel-case is preferred.
 
@@ -49,9 +49,9 @@ Fubuki does not have a standard naming convention but camel-case is preferred.
 helloWorld
 HelloWorld
 _helloWorld
-HELLO_WORLD
+$HELLO_WORLD
 hello_world
-hello123
+$hello123
 ```
 
 ## Expressions
@@ -63,3 +63,7 @@ helloWorld
 1 + 2
 "Hello World!"
 ```
+
+!!! info
+
+    Trailing commas are allowed in function parameters, function call, object key-value pairs and list values. For example, `[1, 2, 3,]` is perfectly valid and same as `[1, 2, 3]`.

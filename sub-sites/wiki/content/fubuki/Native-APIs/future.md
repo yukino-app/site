@@ -28,35 +28,31 @@ print future.await();
 # 1
 ```
 
-## `Future.maybeAwait`
-
-Takes in a value and returns the result of the future if it's a future, or just returns the original value.
-
-```
-Future.maybeAwait(someFutureValue);
-```
-
 ## `Future.wait`
 
 Takes in duration in milliseconds and returns a future that resolved after the duration.
 
 ```
-Future.wait(1000);
+Future.wait(1000).await();
 # waits 1 second
 ```
 
-## `Future.awaitAll`
+## `Future.unify`
 
-Takes in a list of futures and returns the list of resolved values.
+Takes in a list of functions that return futures and returns the list of resolved values.
 
 ```
-Future.awaitAll([futureValue1, futureValue2, ..., futureValueN]);
+Future
+    .unify([-> : futureValue1, -> : futureValue2, ..., -> : futureValueN])
+    .await();
 ```
 
 ## `Future.any`
 
-Takes in a list of futures and returns the value of any one future.
+Takes in a list of that return futures and returns the value of any one future.
 
 ```
-Future.any([futureValue1, futureValue2, ..., futureValueN]);
+Future
+    .any([-> : futureValue1, -> : futureValue2, ..., -> : futureValueN])
+    .await();
 ```
