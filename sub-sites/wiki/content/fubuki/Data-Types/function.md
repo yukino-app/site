@@ -17,3 +17,7 @@ Represents a callable object. Functions are prefixed with right arrow operator (
 -> a, b : a + b
 -> x : x
 ```
+
+| Property | Signature                    | Description                                |
+| -------- | ---------------------------- | ------------------------------------------ |
+| `call`   | `(params: List<Any>) => Any` | Calls the function and returns the result. |
