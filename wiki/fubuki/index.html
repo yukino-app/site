@@ -14,10 +14,10 @@
         <link rel="prev" href="../developers/contribution/">
       
       
-        <link rel="next" href="data-types/">
+        <link rel="next" href="examples/">
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.4">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.9c788c91.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
@@ -164,7 +164,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -472,20 +472,6 @@
   
   
     <li class="md-nav__item">
-      <a href="data-types/" class="md-nav__link">
-        Data Types
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="examples/" class="md-nav__link">
         Examples
       </a>
@@ -517,6 +503,154 @@
       <a href="statements/" class="md-nav__link">
         Statements
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5" tabindex="0" aria-expanded="false">
+          Data Types
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Types" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Data Types
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Data-Types/boolean/" class="md-nav__link">
+        Boolean
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Data-Types/function/" class="md-nav__link">
+        Function
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Data-Types/future/" class="md-nav__link">
+        Future
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Data-Types/list/" class="md-nav__link">
+        List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Data-Types/null/" class="md-nav__link">
+        Null
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Data-Types/number/" class="md-nav__link">
+        Number
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Data-Types/object/" class="md-nav__link">
+        Object
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Data-Types/string/" class="md-nav__link">
+        String
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -977,14 +1111,14 @@ when
 match
 </code></pre></div>
 <h2 id="identifiers">Identifiers<a class="headerlink" href="#identifiers" title="Permanent link">&para;</a></h2>
-<p>Identifiers are made up of alphabets (<code>A-Z</code>, <code>a-z</code>) and underscore (<code>_</code>). Numbers (<code>0-9</code>) can also be used but are not allowed at the start of an identifier. Keywords cannot be used as identifiers.</p>
+<p>Identifiers are made up of alphabets (<code>A-Z</code>, <code>a-z</code>), dollar sign (<code>$</code>) and underscore (<code>_</code>). Numbers (<code>0-9</code>) can also be used but are not allowed at the start of an identifier. Keywords cannot be used as identifiers.</p>
 <p>Fubuki does not have a standard naming convention but camel-case is preferred.</p>
 <div class="highlight"><pre><span></span><code>helloWorld
 HelloWorld
 _helloWorld
-HELLO_WORLD
+$HELLO_WORLD
 hello_world
-hello123
+$hello123
 </code></pre></div>
 <h2 id="expressions">Expressions<a class="headerlink" href="#expressions" title="Permanent link">&para;</a></h2>
 <p>Expression is a piece of code that is evaluated to a value. Literals, operations using operators, identifiers come under expressions.</p>
@@ -992,6 +1126,10 @@ hello123
 1 + 2
 &quot;Hello World!&quot;
 </code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Trailing commas are allowed in function parameters, function call, object key-value pairs and list values. For example, <code>[1, 2, 3,]</code> is perfectly valid and same as <code>[1, 2, 3]</code>.</p>
+</div>
 
 
 
@@ -1063,7 +1201,7 @@ hello123
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
+      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
       
     
   </body>
