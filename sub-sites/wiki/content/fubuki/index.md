@@ -67,3 +67,7 @@ helloWorld
 !!! info
 
     Trailing commas are allowed in function parameters, function call, object key-value pairs and list values. For example, `[1, 2, 3,]` is perfectly valid and same as `[1, 2, 3]`.
+
+# Statements
+
+Statements is a line of code that commands a task. Each program is made up of sequence of statements. Statements must end with a semi-colon (`;`).

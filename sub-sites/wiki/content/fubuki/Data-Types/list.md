@@ -37,3 +37,4 @@ Represents a list of values.
 | `flatDeep`      | `() => List<Any>`                                     | Returns the flatted list of level `this.length`.                  |
 | `unique`        | `() => List<Any>`                                     | Returns the list of unique elements.                              |
 | `forEach`       | `(predicate: (element: Any) => Null) => Null`         | Iterates the list using `predicate`.                              |
+| `join`          | `(delimiter: String) => String`                       | Returns the elements converted to string, joined by `delimiter`.  |
