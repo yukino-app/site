@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://yukino-org.github.io/wiki/fubuki/Native-APIs/future/">
+        <link rel="canonical" href="https://yukino-org.github.io/wiki/fubuki/Statements/return/">
       
       
-        <link rel="prev" href="../function/">
+        <link rel="prev" href="../print/">
       
       
-        <link rel="next" href="../globals/">
+        <link rel="next" href="../throw/">
       
       <link rel="icon" href="../../../assets/logo.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
     
     
       
-        <title>Future - Wiki (Yukino Org)</title>
+        <title>Return Statement - Wiki (Yukino Org)</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#future" class="md-skip">
+        <a href="#return-statement" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Future
+              Return Statement
             
           </span>
         </div>
@@ -423,34 +423,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../operators/" class="md-nav__link">
-        Operators
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../statements/" class="md-nav__link">
-        Statements
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
     
       
     
@@ -459,17 +431,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_3_5" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_3_3" tabindex="0" aria-expanded="false">
           Data Types
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Data Types" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_5">
+        <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Data Types
         </label>
@@ -497,20 +469,6 @@
     <li class="md-nav__item">
       <a href="../../Data-Types/function/" class="md-nav__link">
         Function
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Data-Types/future/" class="md-nav__link">
-        Future
       </a>
     </li>
   
@@ -598,6 +556,694 @@
               
   
   
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" tabindex="0" aria-expanded="false">
+          Native APIs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Native APIs" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Native APIs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Native-APIs/boolean/" class="md-nav__link">
+        Boolean
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Native-APIs/convert/" class="md-nav__link">
+        Convert
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Native-APIs/datetime/" class="md-nav__link">
+        DateTime
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Native-APIs/exception/" class="md-nav__link">
+        Exception
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Native-APIs/fiber/" class="md-nav__link">
+        Fiber
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Native-APIs/function/" class="md-nav__link">
+        Function
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Native-APIs/globals/" class="md-nav__link">
+        Globals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Native-APIs/list/" class="md-nav__link">
+        List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Native-APIs/number/" class="md-nav__link">
+        Number
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Native-APIs/object/" class="md-nav__link">
+        Object
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Native-APIs/regex/" class="md-nav__link">
+        RegExp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Native-APIs/string/" class="md-nav__link">
+        String
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5" tabindex="0" aria-expanded="false">
+          Operators
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Operators" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Operators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/addition/" class="md-nav__link">
+        Addition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/assignment/" class="md-nav__link">
+        Assignment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/bitwise-and/" class="md-nav__link">
+        Bitwise AND
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/bitwise-not/" class="md-nav__link">
+        Bitwise NOT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/bitwise-or/" class="md-nav__link">
+        Bitwise OR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/bitwise-xor/" class="md-nav__link">
+        Bitwise XOR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/call/" class="md-nav__link">
+        Call
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/computed-member-access/" class="md-nav__link">
+        Computed Member Access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/declaration/" class="md-nav__link">
+        Declaration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/division/" class="md-nav__link">
+        Division
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/equality/" class="md-nav__link">
+        Equality
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/exponent/" class="md-nav__link">
+        Exponent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/floor-division/" class="md-nav__link">
+        Floor Division
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/greater-than-or-equal/" class="md-nav__link">
+        Greater Than Or Equal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/greater-than/" class="md-nav__link">
+        Greater Than
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/grouping/" class="md-nav__link">
+        Grouping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/inequality/" class="md-nav__link">
+        Inequality
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/lesser-than-or-equal/" class="md-nav__link">
+        Lesser Than Or Equal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/lesser-than/" class="md-nav__link">
+        Lesser Than
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/logical-and/" class="md-nav__link">
+        Logical AND
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/logical-not/" class="md-nav__link">
+        Logical NOT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/logical-or/" class="md-nav__link">
+        Logical OR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/member-access/" class="md-nav__link">
+        Member Access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/multiplication/" class="md-nav__link">
+        Multiplication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/nullable-access/" class="md-nav__link">
+        Nullable Access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/nullable-or/" class="md-nav__link">
+        Nullable OR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/precedence-table/" class="md-nav__link">
+        Precedence Table
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/remainder/" class="md-nav__link">
+        Remainder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/subtraction/" class="md-nav__link">
+        Subtraction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/ternary/" class="md-nav__link">
+        Ternary Operator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/unary-negation/" class="md-nav__link">
+        Unary negation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operators/unary-plus/" class="md-nav__link">
+        Unary Plus
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -614,14 +1260,14 @@
       
       
         <label class="md-nav__link" for="__nav_3_6" tabindex="0" aria-expanded="true">
-          Native APIs
+          Statements
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Native APIs" data-md-level="2">
+      <nav class="md-nav" aria-label="Statements" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_6">
           <span class="md-nav__icon md-icon"></span>
-          Native APIs
+          Statements
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -631,8 +1277,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../boolean/" class="md-nav__link">
-        Boolean
+      <a href="../block/" class="md-nav__link">
+        Block Statement
       </a>
     </li>
   
@@ -645,8 +1291,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../convert/" class="md-nav__link">
-        Convert
+      <a href="../break/" class="md-nav__link">
+        Break Statement
       </a>
     </li>
   
@@ -659,8 +1305,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../datetime/" class="md-nav__link">
-        DateTime
+      <a href="../continue/" class="md-nav__link">
+        Continue Statement
       </a>
     </li>
   
@@ -673,8 +1319,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../exception/" class="md-nav__link">
-        Exception
+      <a href="../expression/" class="md-nav__link">
+        Expression Statement
       </a>
     </li>
   
@@ -687,8 +1333,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../function/" class="md-nav__link">
-        Function
+      <a href="../if-else/" class="md-nav__link">
+        If-Else Statement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../import/" class="md-nav__link">
+        Import Statements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../match/" class="md-nav__link">
+        Match Statement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../print/" class="md-nav__link">
+        Print Statement
       </a>
     </li>
   
@@ -710,81 +1398,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Future
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Future
+        Return Statement
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#objects" class="md-nav__link">
-    Objects
-  </a>
-  
-    <nav class="md-nav" aria-label="Objects">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#completer" class="md-nav__link">
-    Completer
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#futurenew" class="md-nav__link">
-    Future.new
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#futurewait" class="md-nav__link">
-    Future.wait
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#futureunify" class="md-nav__link">
-    Future.unify
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#futureany" class="md-nav__link">
-    Future.any
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -797,8 +1413,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../globals/" class="md-nav__link">
-        Globals
+      <a href="../throw/" class="md-nav__link">
+        Throw Statement
       </a>
     </li>
   
@@ -811,8 +1427,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../list/" class="md-nav__link">
-        List
+      <a href="../try-catch/" class="md-nav__link">
+        Try-Catch Statement
       </a>
     </li>
   
@@ -825,8 +1441,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../number/" class="md-nav__link">
-        Number
+      <a href="../when/" class="md-nav__link">
+        When Statement
       </a>
     </li>
   
@@ -839,36 +1455,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../object/" class="md-nav__link">
-        Object
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../regex/" class="md-nav__link">
-        RegExp
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../string/" class="md-nav__link">
-        String
+      <a href="../while/" class="md-nav__link">
+        While Statement
       </a>
     </li>
   
@@ -1048,62 +1636,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#objects" class="md-nav__link">
-    Objects
-  </a>
-  
-    <nav class="md-nav" aria-label="Objects">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#completer" class="md-nav__link">
-    Completer
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#futurenew" class="md-nav__link">
-    Future.new
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#futurewait" class="md-nav__link">
-    Future.wait
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#futureunify" class="md-nav__link">
-    Future.unify
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#futureany" class="md-nav__link">
-    Future.any
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1118,64 +1650,14 @@
 
 
 
-<h1 id="future">Future<a class="headerlink" href="#future" title="Permanent link">&para;</a></h1>
-<h2 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">&para;</a></h2>
-<h3 id="completer">Completer<a class="headerlink" href="#completer" title="Permanent link">&para;</a></h3>
-<p>Represents a completable future.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Signature</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>future</code></td>
-<td><code>Future</code></td>
-<td>The future value</td>
-</tr>
-<tr>
-<td><code>complete</code></td>
-<td><code>(value: Any) =&gt; null</code></td>
-<td>Resolves the future.</td>
-</tr>
-<tr>
-<td><code>fail</code></td>
-<td><code>(value: Any) =&gt; null</code></td>
-<td>Fails the future.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="futurenew"><code>Future.new</code><a class="headerlink" href="#futurenew" title="Permanent link">&para;</a></h2>
-<p>Returns a new <code>Completer</code>.</p>
-<div class="highlight"><pre><span></span><code>completer := Future.new();
-future := completer.future;
-future.then(-&gt; x {
-    print x;
-    # 1
-});
-completer.complete(1);
-print future.await();
-# 1
+<h1 id="return-statement">Return Statement<a class="headerlink" href="#return-statement" title="Permanent link">&para;</a></h1>
+<p>Return statement is used to return a value from the function body to it's call. This is done using the <code>return</code> keyword. If no value is specified, <code>null</code> value is returned.</p>
+<div class="highlight"><span class="filename">Syntax</span><pre><span></span><code>return;
+return expr;
 </code></pre></div>
-<h2 id="futurewait"><code>Future.wait</code><a class="headerlink" href="#futurewait" title="Permanent link">&para;</a></h2>
-<p>Takes in duration in milliseconds and returns a future that resolved after the duration.</p>
-<div class="highlight"><pre><span></span><code>Future.wait(1000).await();
-# waits 1 second
-</code></pre></div>
-<h2 id="futureunify"><code>Future.unify</code><a class="headerlink" href="#futureunify" title="Permanent link">&para;</a></h2>
-<p>Takes in a list of functions that return futures and returns the list of resolved values.</p>
-<div class="highlight"><pre><span></span><code>Future
-    .unify([-&gt; : futureValue1, -&gt; : futureValue2, ..., -&gt; : futureValueN])
-    .await();
-</code></pre></div>
-<h2 id="futureany"><code>Future.any</code><a class="headerlink" href="#futureany" title="Permanent link">&para;</a></h2>
-<p>Takes in a list of that return futures and returns the value of any one future.</p>
-<div class="highlight"><pre><span></span><code>Future
-    .any([-&gt; : futureValue1, -&gt; : futureValue2, ..., -&gt; : futureValueN])
-    .await();
+<div class="highlight"><span class="filename">Example</span><pre><span></span><code>return;
+return null;
+return &quot;Hello World&quot;;
 </code></pre></div>
 
 
