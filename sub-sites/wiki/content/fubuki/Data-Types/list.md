@@ -11,30 +11,204 @@ Represents a list of values.
 [1, 2, 3]
 ```
 
-| Property        | Signature                                             | Description                                                       |
-| --------------- | ----------------------------------------------------- | ----------------------------------------------------------------- |
-| `push`          | `(value: Any) => Null`                                | Adds `value` to the list.                                         |
-| `pushAll`       | `(values: List<Any>) => Null`                         | Adds all values of `values` to the list.                          |
-| `pop`           | `() => Null`                                          | Removes the last element.                                         |
-| `clear`         | `() => Null`                                          | Removes all the elements.                                         |
-| `length`        | `() => Number`                                        | Returns length of the list.                                       |
-| `isEmpty`       | `() => Boolean`                                       | Is the list empty?                                                |
-| `isNotEmpty`    | `() => Boolean`                                       | Is the list not empty?                                            |
-| `clone`         | `() => List<Any>`                                     | Returns clone of the list.                                        |
-| `reversed`      | `() => List<Any>`                                     | Returns reversed clone of the list.                               |
-| `contains`      | `(element: Any) => Boolean`                           | Check if `element` is present in the list.                        |
-| `indexOf`       | `(element: Any) => Boolean`                           | Returns the index of `element` in the list.                       |
-| `lastIndexOf`   | `(element: Any) => Boolean`                           | Returns the last index of `element` in the list.                  |
-| `remove`        | `(element: Any) => Boolean`                           | Removes all `element` from the list.                              |
-| `sublist`       | `(start: Number, end: Number) => List<Any>`           | Returns a sub-list consisting elements between `start` and `end`. |
-| `find`          | `(predicate: (element: Any) => Boolean) => Any`       | Returns the matched element using the `predicate`.                |
-| `findIndex`     | `(predicate: (element: Any) => Boolean) => Number`    | Returns the index of matched element using the `predicate`.       |
-| `findLastIndex` | `(predicate: (element: Any) => Boolean) => Number`    | Returns the last index of matched element using the `predicate`.  |
-| `map`           | `(predicate: (element: Any) => Any) => List<Any>`     | Returns the list of mapped values using `predicate`.              |
-| `filter`        | `(predicate: (element: Any) => Boolean) => List<Any>` | Returns the list of filtered values using `predicate`.            |
-| `sort`          | `(sortBy: (a: Any, b: Any) => Number) => List<Any>`   | Returns the sorted list of using `sortBy`.                        |
-| `flat`          | `(level: Number) => List<Any>`                        | Returns the flatted list of level `level`.                        |
-| `flatDeep`      | `() => List<Any>`                                     | Returns the flatted list of level `this.length`.                  |
-| `unique`        | `() => List<Any>`                                     | Returns the list of unique elements.                              |
-| `forEach`       | `(predicate: (element: Any) => Null) => Null`         | Iterates the list using `predicate`.                              |
-| `join`          | `(delimiter: String) => String`                       | Returns the elements converted to string, joined by `delimiter`.  |
+## Properties
+
+### `push`
+
+Adds `value` to the list.
+
+```title="Signature"
+(value: Any) => Null
+```
+
+### `pushAll`
+
+Adds all values of `values` to the list.
+
+```title="Signature"
+(values: List<Any>) => Null
+```
+
+### `pop`
+
+Removes the last element.
+
+```title="Signature"
+() => Null
+```
+
+### `clear`
+
+Removes all the elements.
+
+```title="Signature"
+() => Null
+```
+
+### `length`
+
+Returns length of the list.
+
+```title="Signature"
+() => Number
+```
+
+### `isEmpty`
+
+Is the list empty?
+
+```title="Signature"
+() => Boolean
+```
+
+### `isNotEmpty`
+
+Is the list not empty?
+
+```title="Signature"
+() => Boolean
+```
+
+### `clone`
+
+Returns clone of the list.
+
+```title="Signature"
+() => List<Any>
+```
+
+### `reversed`
+
+Returns reversed clone of the list.
+
+```title="Signature"
+() => List<Any>
+```
+
+### `contains`
+
+Check if `element` is present in the list.
+
+```title="Signature"
+(element: Any) => Boolean
+```
+
+### `indexOf`
+
+Returns the index of `element` in the list.
+
+```title="Signature"
+(element: Any) => Boolean
+```
+
+### `lastIndexOf`
+
+Returns the last index of `element` in the list.
+
+```title="Signature"
+(element: Any) => Boolean
+```
+
+### `remove`
+
+Removes all `element` from the list.
+
+```title="Signature"
+(element: Any) => Boolean
+```
+
+### `sublist`
+
+Returns a sub-list consisting elements between `start` and `end`.
+
+```title="Signature"
+(start: Number, end: Number) => List<Any>
+```
+
+### `find`
+
+Returns the matched element using the `predicate`.
+
+```title="Signature"
+(predicate: (element: Any) => Boolean) => Any
+```
+
+### `findIndex`
+
+Returns the index of matched element using the `predicate`.
+
+```title="Signature"
+(predicate: (element: Any) => Boolean) => Number
+```
+
+### `findLastIndex`
+
+Returns the last index of matched element using the `predicate`.
+
+```title="Signature"
+(predicate: (element: Any) => Boolean) => Number
+```
+
+### `map`
+
+Returns the list of mapped values using `predicate`.
+
+```title="Signature"
+(predicate: (element: Any) => Any) => List<Any>
+```
+
+### `filter`
+
+Returns the list of filtered values using `predicate`.
+
+```title="Signature"
+(predicate: (element: Any) => Boolean) => List<Any>
+```
+
+### `sort`
+
+Returns the sorted list of using `sortBy`.
+
+```title="Signature"
+(sortBy: (a: Any, b: Any) => Number) => List<Any>
+```
+
+### `flat`
+
+Returns the flatted list of level `level`.
+
+```title="Signature"
+(level: Number) => List<Any>
+```
+
+### `flatDeep`
+
+Returns the flatted list of level `this.length`.
+
+```title="Signature"
+() => List<Any>
+```
+
+### `unique`
+
+Returns the list of unique elements.
+
+```title="Signature"
+() => List<Any>
+```
+
+### `forEach`
+
+Iterates the list using `predicate`.
+
+```title="Signature"
+(predicate: (element: Any) => Null) => Null
+```
+
+### `join`
+
+Returns the elements converted to string, joined by `delimiter`.
+
+```title="Signature"
+(delimiter: String) => String
+```

@@ -2,7 +2,7 @@
 
 ## Objects
 
-### BytesList
+### `BytesList`
 
 An internally represented bytes list.
 

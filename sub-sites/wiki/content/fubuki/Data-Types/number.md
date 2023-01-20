@@ -19,15 +19,84 @@ Represents a double-precision floating point value. Supports exponents (`XeY`) a
 0xfff
 ```
 
-| Property          | Signature                    | Description                                                               |
-| ----------------- | ---------------------------- | ------------------------------------------------------------------------- |
-| `sign`            | `() => Number`               | Returns the `-1` (less than zero), `0` (zero) or `1` (greater than zero). |
-| `isFinite`        | `() => Boolean`              | Is the number finite?                                                     |
-| `isInfinite`      | `() => Boolean`              | Is the number infinite?                                                   |
-| `isNaN`           | `() => Boolean`              | Is the number `NaN`?                                                      |
-| `isNegative`      | `() => Boolean`              | Is the number negative?                                                   |
-| `abs`             | `() => Number`               | Returns the number without sign.                                          |
-| `ceil`            | `() => Number`               | Returns the number rounded towards positive infinity.                     |
-| `round`           | `() => Number`               | Returns the number rounded towards negative infinity.                     |
-| `truncate`        | `() => Number`               | Returns the number discarding fractional digits.                          |
-| `precisionString` | `(digits: Number) => String` | Returns the number string with specified precision.                       |
+## Properties
+
+### `sign`
+
+Returns the `-1` (less than zero), `0` (zero) or `1` (greater than zero).
+
+```title="Signature"
+() => Number
+```
+
+### `isFinite`
+
+Is the number finite?
+
+```title="Signature"
+() => Boolean
+```
+
+### `isInfinite`
+
+Is the number infinite?
+
+```title="Signature"
+() => Boolean
+```
+
+### `isNaN`
+
+Is the number `NaN`?
+
+```title="Signature"
+() => Boolean
+```
+
+### `isNegative`
+
+Is the number negative?
+
+```title="Signature"
+() => Boolean
+```
+
+### `abs`
+
+Returns the number without sign.
+
+```title="Signature"
+() => Number
+```
+
+### `ceil`
+
+Returns the number rounded towards positive infinity.
+
+```title="Signature"
+() => Number
+```
+
+### `round`
+
+Returns the number rounded towards negative infinity.
+
+```title="Signature"
+() => Number
+```
+
+### `truncate`
+
+Returns the number discarding fractional digits.
+
+```title="Signature"
+() => Number
+```
+
+### `precisionString`
+
+Returns the number string with specified precision.
+
+```title="Signature"
+(digits: Number) => String
+```

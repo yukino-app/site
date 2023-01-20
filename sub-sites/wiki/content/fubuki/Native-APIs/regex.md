@@ -2,7 +2,7 @@
 
 ## Objects
 
-### RegExp
+### `RegExp`
 
 The regular expression.
 
@@ -22,7 +22,7 @@ The regular expression.
 | `replaceFirstMapped` | `(input: String, with: (RegExpMatch) => String) => String` | Returns a string after replacing first match of `input` against the pattern using the value returned by `with`.     |
 | `replaceAllMapped`   | `(input: String, with: (RegExpMatch) => String) => String` | Returns a string after replacing all the matches of `input` against the pattern using the value returned by `with`. |
 
-### RegExpMatch
+### `RegExpMatch`
 
 Contains information about a regular expression match.
 

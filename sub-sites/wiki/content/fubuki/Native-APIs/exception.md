@@ -2,7 +2,7 @@
 
 ## Objects
 
-### Exception
+### `ExceptionInst`
 
 Contains information about an exception.
 
@@ -13,7 +13,7 @@ Contains information about an exception.
 
 ## `Exception.new`
 
-Takes in a message, optional stack trace and returns a `Exception`.
+Takes in a message, optional stack trace and returns a `ExceptionInst`.
 
 ```
 Exception.new("Something went wrong!");

@@ -18,6 +18,12 @@ Represents a callable object. Functions are prefixed with right arrow operator (
 -> x : x
 ```
 
-| Property | Signature                    | Description                                |
-| -------- | ---------------------------- | ------------------------------------------ |
-| `call`   | `(params: List<Any>) => Any` | Calls the function and returns the result. |
+## Properties
+
+### `call`
+
+Calls the function and returns the result.
+
+```title="Signature"
+(params: List<Any>) => Any
+```

@@ -15,7 +15,7 @@ repo:
 # source code's path
 source:
     root: path/to/directory
-    file: filename.ht
+    file: filename.fbs
 
 # thumbnail's path (Resolution must be 96x96 and a png)
 thumbnail: path/to/logo.png

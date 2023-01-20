@@ -2,7 +2,7 @@
 
 ## Objects
 
-### DateTimeInst
+### `DateTimeInst`
 
 Contains information about the time.
 
