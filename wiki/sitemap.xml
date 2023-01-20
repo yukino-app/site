@@ -2,367 +2,407 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://yukino-org.github.io/wiki/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/developers/contribution/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/examples/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Data-Types/boolean/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Data-Types/function/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Data-Types/list/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Data-Types/null/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Data-Types/number/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Data-Types/object/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Data-Types/string/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Native-APIs/boolean/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Native-APIs/convert/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Native-APIs/datetime/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Native-APIs/exception/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Native-APIs/fiber/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Native-APIs/function/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Native-APIs/globals/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Native-APIs/list/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Native-APIs/number/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Native-APIs/object/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Native-APIs/regex/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Native-APIs/string/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/addition/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/assignment/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/bitwise-and/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/bitwise-not/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/bitwise-or/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/bitwise-xor/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/call/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/computed-member-access/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/declaration/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/division/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/equality/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/exponent/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/floor-division/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/greater-than-or-equal/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/greater-than/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/grouping/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/inequality/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/lesser-than-or-equal/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/lesser-than/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/logical-and/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/logical-not/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/logical-or/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/member-access/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/multiplication/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/nullable-access/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/nullable-or/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/precedence-table/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/remainder/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/subtraction/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/ternary/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/unary-negation/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Operators/unary-plus/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Statements/block/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Statements/break/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Statements/continue/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Statements/expression/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Statements/if-else/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Statements/import/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Statements/match/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Statements/print/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Statements/return/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Statements/throw/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Statements/try-catch/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Statements/when/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/fubuki/Statements/while/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/tenka/disclaimer/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://yukino-org.github.io/wiki/tenka/module-structure/</loc>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/tenka/store/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://yukino-org.github.io/wiki/tenka/Fubuki-Bindings/crypto/</loc>
+         <lastmod>2023-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://yukino-org.github.io/wiki/tenka/Fubuki-Bindings/fuzzy/</loc>
+         <lastmod>2023-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://yukino-org.github.io/wiki/tenka/Fubuki-Bindings/html/</loc>
+         <lastmod>2023-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://yukino-org.github.io/wiki/tenka/Fubuki-Bindings/http/</loc>
+         <lastmod>2023-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://yukino-org.github.io/wiki/tenka/Fubuki-Bindings/languages/</loc>
+         <lastmod>2023-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://yukino-org.github.io/wiki/tenka/Fubuki-Bindings/tenvironment/</loc>
+         <lastmod>2023-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://yukino-org.github.io/wiki/tenka/Fubuki-Bindings/url/</loc>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/yukimi/advanced_usage/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/yukimi/basic_usage/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://yukino-org.github.io/wiki/yukimi/installation/</loc>
-         <lastmod>2023-01-18</lastmod>
+         <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
