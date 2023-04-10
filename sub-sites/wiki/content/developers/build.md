@@ -9,11 +9,7 @@ Requirements:
 - [Android SDK](https://developer.android.com/studio)
 - (Optional)[Git](https://git-scm.com/downloads)
 
-To begin, you have two options for getting source:
-Option one:
 In your browser, navigate to the [Kazahana Repository](https://github.com/yukino-org/kazahana) and press the green code button and download the zip.
-Option two(Git):
-Open a new terminal and run the following command `git clone https://github.com/yukino-org/kazahana.git`
 
 Once you have the source downloaded and opened in visual studio code, run `flutter pub get`.
 Next, run `flutter packages pub run build_runner build --delete-conflicting-outputs`
